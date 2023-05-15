@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=https://moonrepo.dev/schemas/project.json
+
+type: "application"
+language: "typescript"
+
+fileGroups:
+  sources:
+    - "public/**/*"
+    - "src/**/*"
+    - "astro.config.*"
+  tests:
+    - 'tests/**/*'
+  other: []
+
+tasks:
+  astro:
+    command: astro
+    local: true
+
+  build:
+    deps:
+      - "^:trigger"
+    env:
+      STATE: "building"
+    command: "astro build"
+    inputs:
+      - "@group(sources)"
+      - "@group(other)"
+    outputs:
+      - "dist"
+
+  preview:
+    command: "wrangler pages dev dist"
+    deps:
+      - "~:build"
+    options:
+      persistent: true
+      runInCI: false
+      cache: false
+
+  dev:
+    command: "astro dev"
+    local: true
+    options:
+      persistent: true
+      runInCI: false
+      cache: false
+
+  ccheck:
+    env:
+      SKIP_ENV_VALIDATION: "true"
+    command: "astro check"
+    inputs:
+      - "@group(sources)"
+      - "@group(other)"
+    deps:
+      - "~:typecheck"
+
+  # types:
+  #   command: 'wrangler types'
+  #   options:
+  #     cache: false
+
+# Disable project references
+toolchain:
+  typescript:
+    syncProjectReferences: false

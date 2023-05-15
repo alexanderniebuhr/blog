@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://moonrepo.dev/schemas/tasks.json
+implicitInputs:
+  - 'package.json'
+  
+tasks:
+    typecheck:
+        command:
+            - 'tsc'
+            # Use incremental builds with project references
+            - '--build'
+            # Use verbose logging to see affected projects
+            # - '--verbose'
+        inputs:
+            # Source and test files
+            - 'src/**/*'
+            - 'tests/**/*'
+            # Type declarations
+            - 'types/**/*'
+            # Project configs
+            - 'tsconfig.json'
+            - 'tsconfig.*.json'
+            # Root configs (extended from only)
+            - '/tsconfig.options.json'
+    format:
+        command:
+            - 'dprint'
+            - 'check'
+            # Use the same config for the entire repo
+            - '--config'
+            - '@in(0)'
+            # - '--verbose'
+        inputs:
+            - '/dprint.json'
+            - 'src/**/*'
+            - '**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml,astro,svelte}'

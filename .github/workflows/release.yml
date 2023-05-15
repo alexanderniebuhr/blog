@@ -1,0 +1,93 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "main"
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+        with:
+          fetch-depth: 0
+      - uses: moonrepo/setup-moon-action@v1.1.1
+      - run: moon run :format
+  check:
+    runs-on: ubuntu-latest
+    name: Check
+    steps:
+      - uses: actions/checkout@v3.5.2
+        with:
+          fetch-depth: 0
+      - uses: moonrepo/setup-moon-action@v1.1.1
+      - run: moon run :lint
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - uses: actions/checkout@v3.5.2
+        with:
+          fetch-depth: 0
+      # - uses: nrwl/nx-set-shas@v3
+      - run: echo test
+  build:
+    runs-on: ubuntu-latest
+    needs: [lint, check, test]
+    environment: test (Production)
+    name: Build
+    steps:
+      - uses: actions/checkout@v3.5.2
+        with:
+          fetch-depth: 0
+      - uses: moonrepo/setup-moon-action@v1.1.1
+      - name: Build
+        env:
+          BUILDING: true
+          VITE_TIME: ${{ vars.VITE_TIME}}
+          PUBLIC_API_URL: ${{ vars.PUBLIC_API_URL }}
+        # run: pnpm install --frozen-lockfile && pnpm nx run-many -t build --skip-nx-cache
+        run: moon run :build
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [lint, check, test, build]
+    environment: test (Production)
+    permissions:
+      contents: read
+      deployments: write
+      pull-requests: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - uses: actions/checkout@v3.5.2
+        with:
+          fetch-depth: 0
+      # - uses: nrwl/nx-set-shas@v3
+      # - uses: pnpm/action-setup@v2.2.4
+      # - uses: actions/setup-node@v3.6.0
+      #   with:
+      #     node-version-file: '.nvmrc'
+      - uses: moonrepo/setup-moon-action@v1.1.1
+      - name: Publish
+        id: publish
+        uses: cloudflare/pages-action@v1.5.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+          directory: ${{ vars.ASSET_DIRECTORY}}
+          workingDirectory: ${{ vars.WORKING_DIRECTORY }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+          echo "ID: ${{ steps.publish.outputs.id }}"
+          echo "URL: ${{ steps.publish.outputs.url }}"
+          echo "Environment: ${{ steps.publish.outputs.environment }}"
+          echo "Alias: ${{ steps.publish.outputs.alias }}"
+
+# https://github.com/cloudflare/pages-action/issues/16#issuecomment-1398478711

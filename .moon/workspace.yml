@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://moonrepo.dev/schemas/workspace.json
+
+projects:
+  # acutal website
+  blog: 'apps/blog'
+  # local-only (can be typescript only)
+  api: 'packages/api'
+  # local-only (can be typescript only)
+  db: 'packages/db'
+
+codeowners: 
+  syncOnRun: true
+  globalPaths: 
+    '*': ['@alexanderniebuhr']
+
+vcs:
+  manager: 'git'
+  provider: 'github'
+  defaultBranch: 'main'
+
+runner: 
+  inheritColorsForPipedTasks: true

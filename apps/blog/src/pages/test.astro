@@ -1,0 +1,9 @@
+---
+import { getEntryBySlug } from "astro:content";
+
+const entry = await getEntryBySlug("bits", "test");
+const { Content } = await entry.render();
+---
+
+<!--Render Markdoc contents with the Content component-->
+<Content />
