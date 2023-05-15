@@ -1,0 +1,25 @@
+{
+  "name": "@example/minimal",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@8.5.1",
+  "engines": {
+    "node": "18.16.0",
+    "pnpm": "8.5.1"
+  },
+  "scripts": {
+    "lint": "nx lint",
+    "build": "nx build",
+    "graph": "nx graph",
+    "check": "rome check . --verbose --max-diagnostics 1",
+    "format": "rome format . --write",
+    "deps": "pnpm update --recursive --latest --interactive",
+    "migrate": "nx migrate latest --verbose"
+  },
+  "devDependencies": {
+    "nx": "16.2.1",
+    "nx-cloud": "16.0.5",
+    "rome": "12.1.2",
+    "typescript": "5.0.4"
+  }
+}

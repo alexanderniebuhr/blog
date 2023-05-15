@@ -1,0 +1,32 @@
+---
+// import BaseHead from '../components/BaseHead.astro';
+// import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <BaseHead title={title} /> -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <style></style>
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Posts</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <slot />
+      </article>
+    </main>
+    <aside></aside>
+    <!-- <Footer /> -->
+  </body>
+  <script></script>
+</html>

@@ -1,0 +1,23 @@
+{
+	"name": "trcp-router",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./index.ts",
+			"default": "./index.ts"
+		}
+	},
+	"scripts": {
+		"lint": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@trpc/client": "10.26.0",
+		"@trpc/server": "10.26.0",
+		"zod": "3.21.4"
+	},
+	"devDependencies": {
+		"tsconfig": "workspace:*",
+		"typescript": "5.0.4"
+	}
+}

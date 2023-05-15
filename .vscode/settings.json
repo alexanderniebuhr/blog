@@ -1,0 +1,12 @@
+{
+	"files.associations": {
+		"*.mdx": "markdown"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"typescript.tsdk": "node_modules/typescript/lib"
+}
