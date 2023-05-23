@@ -8,6 +8,7 @@ jobs:
     permissions:
       contents: read
       deployments: write
+      pull-requests: write
     name: Deploy to Cloudflare Pages
     steps:
       - uses: actions/checkout@v3.5.0
@@ -24,7 +25,7 @@ jobs:
         run: pnpm install --frozen-lockfile && pnpm nx run-many -t build --skip-nx-cache
       - name: Publish
         id: publish
-        uses: cloudflare/pages-action@v1.4.1
+        uses: cloudflare/pages-action@v1.5.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
@@ -37,3 +38,4 @@ jobs:
           echo "URL: ${{ steps.publish.outputs.url }}"
           echo "Environment: ${{ steps.publish.outputs.environment }}"
           echo "Alias: ${{ steps.publish.outputs.alias }}"
+# https://github.com/cloudflare/pages-action/issues/16#issuecomment-1398478711
