@@ -4,7 +4,13 @@
 		"enabled": true
 	},
 	"files": {
-		"ignore": ["*node_modules/*", "*dist/*", "apps/blog/.astro/types.d.ts", "apps/blog/functions/[[path]].js"]
+		"ignore": [
+			"*node_modules/*",
+			"*dist/*",
+			"apps/blog/.astro/types.d.ts",
+			"apps/blog/functions/[[path]].js",
+			".vscode/*"
+		]
 	},
 	"linter": {
 		"enabled": true,
