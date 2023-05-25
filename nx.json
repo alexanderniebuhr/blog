@@ -1,46 +1,30 @@
 {
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx-cloud",
-      "options": {
-        "cacheableOperations": [
-          "lint",
-          "build",
-          "test"
-        ],
-        "parallel": 5,
-        "accessToken": "ZjM4NTU1MzQtZjFhNy00MjM0LTk4MzQtMjE4Y2JjZjRiMTFlfHJlYWQtd3JpdGU="
-      }
-    }
-  },
-  "targetDefaults": {
-    "build": {
-      "dependsOn": [
-        "lint",
-        "^build"
-      ]
-    },
-    "lint": {
-      "dependsOn": [
-        "^lint"
-      ]
-    },
-    "preview": {
-      "dependsOn": [
-        "build"
-      ]
-    }
-  },
-  "defaultBase": "main",
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
-    "sharedGlobals": [],
-    "production": [
-      "default"
-    ]
-  }
+	"tasksRunnerOptions": {
+		"default": {
+			"runner": "nx-cloud",
+			"options": {
+				"cacheableOperations": ["lint", "build", "test"],
+				"parallel": 5,
+				"accessToken": "ZjM4NTU1MzQtZjFhNy00MjM0LTk4MzQtMjE4Y2JjZjRiMTFlfHJlYWQtd3JpdGU="
+			}
+		}
+	},
+	"targetDefaults": {
+		"build": {
+			"dependsOn": ["lint", "^build"]
+		},
+		"lint": {
+			"dependsOn": ["^lint"]
+		},
+		"preview": {
+			"dependsOn": ["build"]
+		}
+	},
+	"defaultBase": "main",
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"namedInputs": {
+		"default": ["{projectRoot}/**/*", "sharedGlobals"],
+		"sharedGlobals": [],
+		"production": ["default"]
+	}
 }

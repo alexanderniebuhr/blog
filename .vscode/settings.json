@@ -8,5 +8,12 @@
 	"[json]": {
 		"editor.defaultFormatter": "rome.rome"
 	},
-	"typescript.tsdk": "node_modules/typescript/lib"
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"stylelint.validate": [
+		"css",
+		"less",
+		"postcss",
+		"html",
+		"astro"
+	]
 }

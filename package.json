@@ -20,6 +20,10 @@
 		"nx": "16.2.1",
 		"nx-cloud": "16.0.5",
 		"rome": "12.1.2",
-		"typescript": "5.0.4"
+		"stylelint": "15.6.2",
+		"stylelint-config-standard": "^33.0.0",
+		"typescript": "5.0.4",
+		"postcss-html": "1.5.0",
+		"stylelint-config-html": "1.1.0"
 	}
 }
