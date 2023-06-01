@@ -12,12 +12,12 @@
 		"lint": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@trpc/client": "10.27.1",
-		"@trpc/server": "10.27.1",
+		"@trpc/client": "10.28.2",
+		"@trpc/server": "10.28.2",
 		"zod": "3.21.4"
 	},
 	"devDependencies": {
 		"tsconfig": "workspace:*",
-		"typescript": "5.0.4"
+		"typescript": "5.1.3"
 	}
 }
