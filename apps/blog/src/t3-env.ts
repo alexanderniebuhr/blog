@@ -1,7 +1,8 @@
 import { createEnv } from "@t3-oss/env-core"
 import { z } from "zod"
 
-const isBuild = process.env.STATE === "building"
+const isServer = typeof window === "undefined"
+const isBuild = isServer && process.env.STATE === "building"
 
 const serverVariables = {
 	build: {
@@ -18,6 +19,7 @@ export const createRuntimeEnv = (prop?: unknown) => {
 	const rEnv = prop as Record<string, string | number | boolean | undefined>
 	return createEnv({
 		skipValidation:
+			isServer &&
 			!!process.env.SKIP_ENV_VALIDATION &&
 			process.env.SKIP_ENV_VALIDATION !== "false" &&
 			process.env.SKIP_ENV_VALIDATION !== "0",
