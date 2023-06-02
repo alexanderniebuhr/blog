@@ -1,4 +1,4 @@
-import type { AppRouter } from "trcp-router"
+import type { AppRouter } from "@alexanderniebuhr/trcp-router"
 
 import { createTRPCProxyClient, httpBatchLink } from "@trpc/client"
 

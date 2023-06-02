@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://moonrepo.dev/schemas/tasks.json
+tasks:
+    typecheck:
+        command:
+            - 'tsc'
+            # Use incremental builds with project references
+            - '--build'
+            # Use verbose logging to see affected projects
+            - '--verbose'
+        inputs:
+            # Source and test files
+            - 'src/**/*'
+            - 'tests/**/*'
+            # Type declarations
+            - 'types/**/*'
+            # Project configs
+            - 'tsconfig.json'
+            - 'tsconfig.*.json'
+            # Root configs (extended from only)
+            - '/tsconfig.options.json'
+        # outputs:
+        #     # Matches `compilerOptions.outDir`
+        #     - 'lib'

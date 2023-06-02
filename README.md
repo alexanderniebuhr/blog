@@ -7,7 +7,7 @@ pnpm nx migrate latest --interactive
 # DEPS
 
 ```sh
-pnpm update --recursive --interactive --latest
+pnpm update -i -r --latest
 ```
 
 ```sh

@@ -3,7 +3,6 @@ export const prerender = false;
 
 import { getRuntime } from "@astrojs/cloudflare/runtime";
 
-// import { trpcAstro } from "../scripts/client";
 import "../styles/global.css";
 import { createRuntimeEnv } from "../t3-env";
 
@@ -12,6 +11,8 @@ import MyClientComponent from "@components/MyClientComponent";
 
 const env = createRuntimeEnv(getRuntime(Astro.request)?.env);
 console.log(env.PUBLIC_API_URL);
+
+// import { trpcAstro } from "../scripts/client";
 // const users = await trpcAstro(env.CF_PAGES_URL).users.getById.query("1");
 ---
 

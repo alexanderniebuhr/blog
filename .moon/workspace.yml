@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://moonrepo.dev/schemas/workspace.json
+
+projects:
+  blog: 'apps/blog'
+  api: 'packages/api'
+  # apiClients: 'packages/api-clients'
+
+vcs:
+  manager: 'git'
+  defaultBranch: 'main'
+
+runner: 
+  inheritColorsForPipedTasks: true

@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://moonrepo.dev/schemas/project.json
+
+type: 'application'
+
+fileGroups:
+  astro:
+    - 'public/**/*'
+    - 'src/**/*'
+    - 'astro.config.*'
+
+tasks:
+  
+  # Development server
+  dev:
+    command: "astro dev"
+    local: true
+
+  # Production server
+  build:
+    env:
+      STATE: 'building'
+    command: "astro build"
+    inputs:
+      - '@group(astro)'
+    outputs:
+      - 'dist'
+
+  types:
+    env:
+      SKIP_ENV_VALIDATION: 'true'
+    command: 'astro check'
+    inputs:
+      - '@group(astro)'
+    # deps:
+    #   - '~:typecheck'
+
+# Disable project references
+toolchain:
+    typescript:
+      syncProjectReferences: false

@@ -1,28 +1,37 @@
 {
-  "extends": "astro/tsconfigs/strictest",
+  "extends": "../../tsconfig.options.json",
   "compilerOptions": {
     "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "baseUrl": ".",
+    "jsxImportSource": "react",
+    "jsx": "react-jsx",
     "paths": {
-      "@layouts/*": [
-        "src/layouts/*"
-      ],
       "@components/*": [
         "src/components/*"
       ],
-      "@styles/*": [
-        "src/styles/*"
+      "@layouts/*": [
+        "src/layouts/*"
       ],
-      "@assets/*": [
+      "~/assets/*": [
         "src/assets/*"
       ]
     },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "outDir": "../../.moon/cache/types/apps/blog"
   },
+  "ignoreDeprecations": "5.0",
   "include": [
-    "src",
-    "astro.config.ts",
-    "markdoc.config.ts",
+    "src/**/*",
+    "*.ts"
   ],
+  "references": []
 }
