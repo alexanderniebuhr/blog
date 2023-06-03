@@ -15,8 +15,5 @@
 		"@trpc/client": "10.29.0",
 		"@trpc/server": "10.29.0",
 		"zod": "3.21.4"
-	},
-	"devDependencies": {
-		"tsconfig": "workspace:*"
 	}
 }

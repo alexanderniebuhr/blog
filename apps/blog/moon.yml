@@ -9,13 +9,8 @@ fileGroups:
     - 'astro.config.*'
 
 tasks:
-  
-  # Development server
-  dev:
-    command: "astro dev"
-    local: true
 
-  # Production server
+  # Production build
   build:
     env:
       STATE: 'building'
@@ -25,14 +20,42 @@ tasks:
     outputs:
       - 'dist'
 
+  # Production build
+  watch:
+    env:
+      ROARR_LOG: 'true'
+    command: "turbowatch"
+    options:
+      persistent: true
+
+  wrangler:
+    command: 'wrangler pages dev dist --log-level debug --live-reload'
+  
+  # Preview production build locally
+  preview:
+      command: 'noop'
+      deps:
+        - '~:watch'
+        - '~:wrangler'
+      options:
+        persistent: true
+        cache: false
+      
+  # Development server
+  dev:
+    command: "astro dev"
+    options:
+      persistent: true
+      cache: false
+
   types:
     env:
       SKIP_ENV_VALIDATION: 'true'
     command: 'astro check'
     inputs:
       - '@group(astro)'
-    # deps:
-    #   - '~:typecheck'
+    deps:
+      - '~:typecheck'
 
 # Disable project references
 toolchain:

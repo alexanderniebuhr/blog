@@ -12,14 +12,14 @@ import MyClientComponent from "@components/MyClientComponent";
 const env = createRuntimeEnv(getRuntime(Astro.request)?.env);
 console.log(env.PUBLIC_API_URL);
 
-// import { trpcAstro } from "../scripts/client";
-// const users = await trpcAstro(env.CF_PAGES_URL).users.getById.query("1");
+import { trpcAstro } from "../scripts/client";
+const users = await trpcAstro(env.CF_PAGES_URL).users.getById.query("1");
 ---
 
 <Wrapper>
   <div>
     <p>Hello world! This is a short paragraph.</p>
-    <!-- {JSON.stringify(users)} -->
+    {JSON.stringify(users)}
     <MyClientComponent client:only />
   </div>
 </Wrapper>

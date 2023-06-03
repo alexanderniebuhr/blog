@@ -3,7 +3,6 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "STATE=building astro build",
 		"preview": "wrangler pages dev ./dist --log-level debug --compatibility-date=2023-05-12"
 	},
 	"dependencies": {

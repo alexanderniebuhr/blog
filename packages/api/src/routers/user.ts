@@ -5,6 +5,8 @@ export const userRouter = createTRPCRouter({
 	getById: publicProcedure.input(z.string()).query(({ input }) => {
 		// console.log("ctx", ctx)
 		console.log("input", input)
-		return {}
+		return {
+			name: "Alex",
+		}
 	}),
 })

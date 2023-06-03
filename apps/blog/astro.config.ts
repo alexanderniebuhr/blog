@@ -13,6 +13,12 @@ try {
 	process.exit(1)
 }
 
+// import { fileURLToPath } from "url"
+// import path from "path"
+
+// const __filename = fileURLToPath(import.meta.url)
+// const __dirname = path.dirname(__filename)
+
 // https://astro.build/config
 export default defineConfig({
 	scopedStyleStrategy: "class",
@@ -29,6 +35,11 @@ export default defineConfig({
 		mode: "advanced",
 	}),
 	vite: {
+		// resolve: {
+		// 	alias: {
+		// 		"@alexanderniebuhr/trcp-router": path.join(__dirname, "../../packages/api/src"),
+		// 	},
+		// },
 		build: {
 			minify: false,
 		},
