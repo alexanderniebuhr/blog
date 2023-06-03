@@ -23,24 +23,18 @@ tasks:
   # Production build
   watch:
     env:
-      ROARR_LOG: 'true'
-    command: "turbowatch"
+    command: "nodemon --watch 'src/**/*' --ext astro,tsx,ts --exec \"moon run blog:build\""
     options:
       persistent: true
 
-  wrangler:
-    command: 'wrangler pages dev dist --log-level debug --live-reload'
-  
-  # Preview production build locally
   preview:
-      command: 'noop'
-      deps:
-        - '~:watch'
-        - '~:wrangler'
-      options:
-        persistent: true
-        cache: false
-      
+    command: 'wrangler pages dev dist --live-reload'
+    deps:
+      - '~:watch'
+    options: 
+      persistent: true
+      cache: false
+
   # Development server
   dev:
     command: "astro dev"
