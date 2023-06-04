@@ -16,10 +16,10 @@
     "jsxImportSource": "react",
     "jsx": "react-jsx",
     "paths": {
-      "@alexanderniebuhr/trcp-router": [
+      "@alexanderniebuhr/blog-trcp": [
         "../../packages/api/src/index.ts"
       ],
-      "@alexanderniebuhr/trcp-router/*": [
+      "@alexanderniebuhr/blog-trcp/*": [
         "../../packages/api/src/*"
       ],
       "@components/*": [

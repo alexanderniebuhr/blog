@@ -1,8 +1,11 @@
 import type { inferAsyncReturnType } from "@trpc/server"
 import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch"
 
+import { getRuntime } from "@astrojs/cloudflare/runtime"
 import { initTRPC } from "@trpc/server"
 import { ZodError } from "zod"
+
+import { Pool, drizzle } from "@alexanderniebuhr/blog-db"
 
 /**
  * 1. CONTEXT
@@ -13,22 +16,27 @@ import { ZodError } from "zod"
  * processing a request
  *
  */
-// type CreateContextOptions = {};
+type CreateContextOptions = {
+	DATABASE_URL: string
+}
+
+interface Env {
+	DATABASE_URL: string
+}
 
 /**
  * This is the actual context you'll use in your router. It will be used to
  * process every request that goes through your tRPC endpoint
  * @link https://trpc.io/docs/context
  */
-export const createTRPCContext = ({ req, resHeaders }: FetchCreateContextFnOptions) => {
-	// Get the session from the server using the unstable_getServerSession wrapper function
-	// const session = await getServerSession({ req, res });
+export function createTRPCContext({ req, resHeaders }: FetchCreateContextFnOptions) {
+	const runtime = getRuntime(req)
+	const client = new Pool({ connectionString: runtime.env.DATABASE_URL })
+	const db = drizzle(client)
 
-	// return createInnerTRPCContext({
-	// 	session,
-	// });
-	return { req, resHeaders }
+	return { req, resHeaders, db }
 }
+export type Context = inferAsyncReturnType<typeof createTRPCContext>
 
 /**
  * 2. INITIALIZATION
@@ -36,7 +44,7 @@ export const createTRPCContext = ({ req, resHeaders }: FetchCreateContextFnOptio
  * This is where the trpc api is initialized, connecting the context and
  * transformer
  */
-export type Context = inferAsyncReturnType<typeof createTRPCContext>
+
 const t = initTRPC.context<Context>().create({
 	errorFormatter({ shape, error }) {
 		return {

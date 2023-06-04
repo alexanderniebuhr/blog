@@ -1,5 +1,5 @@
 {
-	"name": "@alexanderniebuhr/trcp-router",
+	"name": "@alexanderniebuhr/blog-trcp",
 	"private": true,
 	"type": "module",
 	"exports": {
@@ -8,12 +8,10 @@
 			"default": "./src/index.ts"
 		}
 	},
-	"scripts": {
-		"lint": "tsc --noEmit"
-	},
 	"dependencies": {
-		"@trpc/client": "10.29.0",
 		"@trpc/server": "10.29.0",
-		"zod": "3.21.4"
+		"zod": "3.21.4",
+		"@astrojs/cloudflare": "6.3.0",
+		"@alexanderniebuhr/blog-db": "workspace:*"
 	}
 }

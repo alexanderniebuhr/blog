@@ -1,7 +1,9 @@
 export const prerender = false
-import { fetchRequestHandler } from "@trpc/server/adapters/fetch"
+
 import type { APIRoute } from "astro"
-import { appRouter, createTRPCContext } from "@alexanderniebuhr/trcp-router"
+
+import { appRouter, createTRPCContext } from "@alexanderniebuhr/blog-trcp"
+import { fetchRequestHandler } from "@trpc/server/adapters/fetch"
 
 export const all: APIRoute = (opts) => {
 	return fetchRequestHandler({

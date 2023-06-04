@@ -37,7 +37,7 @@ export default defineConfig({
 	vite: {
 		// resolve: {
 		// 	alias: {
-		// 		"@alexanderniebuhr/trcp-router": path.join(__dirname, "../../packages/api/src"),
+		// 		"@alexanderniebuhr/blog-trcp": path.join(__dirname, "../../packages/api/src"),
 		// 	},
 		// },
 		build: {

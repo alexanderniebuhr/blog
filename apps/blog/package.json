@@ -1,5 +1,5 @@
 {
-	"name": "blog",
+	"name": "@alexanderniebuhr/blog-app",
 	"private": true,
 	"type": "module",
 	"scripts": {
@@ -21,7 +21,7 @@
 		"react-dom": "18.2.0",
 		"rollup": "3.23.0",
 		"sitemap": "7.1.1",
-		"@alexanderniebuhr/trcp-router": "workspace:*",
+		"@alexanderniebuhr/blog-trcp": "workspace:*",
 		"web-vitals": "3.3.2",
 		"zod": "3.21.4"
 	},

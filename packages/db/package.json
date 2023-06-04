@@ -1,0 +1,19 @@
+{
+	"name": "@alexanderniebuhr/blog-db",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		}
+	},
+	"dependencies": {
+		"drizzle-orm": "0.26.5",
+		"@neondatabase/serverless": "0.4.9"
+	},
+	"devDependencies": {
+		"drizzle-kit": "0.18.1",
+		"postgres": "3.3.5",
+		"tsx": "3.12.7"
+	}
+}

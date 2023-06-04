@@ -3,6 +3,7 @@
 projects:
   blog: 'apps/blog'
   api: 'packages/api'
+  db: 'packages/db'
   # apiClients: 'packages/api-clients'
 
 vcs:

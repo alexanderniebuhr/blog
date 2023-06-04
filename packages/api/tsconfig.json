@@ -3,18 +3,23 @@
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/packages/api",
-    "target": "esnext",
-    "module": "esnext",
-    "lib": [
-      "esnext"
-    ],
-    "types": [
-      "@cloudflare/workers-types"
-    ]
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "@alexanderniebuhr/blog-db": [
+        "../db/src/index.ts"
+      ],
+      "@alexanderniebuhr/blog-db/*": [
+        "../db/src/*"
+      ]
+    }
   },
   "include": [
-    "src/index.ts",
-    "src/**/*"
+    "src/**/*",
+    "*.ts"
   ],
-  "references": []
+  "references": [
+    {
+      "path": "../db"
+    }
+  ]
 }

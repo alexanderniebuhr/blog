@@ -1,0 +1,12 @@
+diff --git a/package.json b/package.json
+index d09c6340a9d88d0430fe817b4ec16571e25a9768..ead1c4537eba40636d144d46ccc1cd7a56d9f21a 100644
+--- a/package.json
++++ b/package.json
+@@ -4,6 +4,7 @@
+   "author": "Neon",
+   "description": "node-postgres via WebSockets from neon.tech",
+   "exports": {
++    "types": "./index.d.ts",
+     "require": "./index.js",
+     "import": "./index.mjs"
+   },
