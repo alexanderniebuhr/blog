@@ -24,10 +24,5 @@
 		"tsconfig-moon": "1.3.0",
 		"typescript": "5.1.3"
 	},
-	"packageManager": "pnpm@8.6.0",
-	"pnpm": {
-		"patchedDependencies": {
-			"@neondatabase/serverless@0.4.9": "patches/@neondatabase__serverless@0.4.9.patch"
-		}
-	}
+	"packageManager": "pnpm@8.6.0"
 }

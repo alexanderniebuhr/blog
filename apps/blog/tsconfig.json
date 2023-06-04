@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.options.json",
   "compilerOptions": {
     "moduleResolution": "bundler",
-    "resolveJsonModule": true,
+    "resolveJsonModule": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,

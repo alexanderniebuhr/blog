@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  '@neondatabase/serverless@0.4.9':
-    hash: dar6ggli2gbiuraofmistmcgtu
-    path: patches/@neondatabase__serverless@0.4.9.patch
-
 importers:
 
   .:
@@ -135,11 +130,11 @@ importers:
   packages/db:
     dependencies:
       '@neondatabase/serverless':
-        specifier: 0.4.9
-        version: 0.4.9(patch_hash=dar6ggli2gbiuraofmistmcgtu)
+        specifier: 0.4.3
+        version: 0.4.3
       drizzle-orm:
         specifier: 0.26.5
-        version: 0.26.5(@cloudflare/workers-types@4.20230518.0)(@neondatabase/serverless@0.4.9)(postgres@3.3.5)
+        version: 0.26.5(@cloudflare/workers-types@4.20230518.0)(@neondatabase/serverless@0.4.3)(postgres@3.3.5)
     devDependencies:
       drizzle-kit:
         specifier: 0.18.1
@@ -1156,12 +1151,11 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@neondatabase/serverless@0.4.9(patch_hash=dar6ggli2gbiuraofmistmcgtu):
-    resolution: {integrity: sha512-JJvap8zh7GLfTIEyzYeSE6NeWjZxpcsW3nWR7P6EnfXcyI71vVo6SFr+XCTISgfJNpdofV9udkPEKV7DAYKo5w==}
+  /@neondatabase/serverless@0.4.3:
+    resolution: {integrity: sha512-U8tpuF5f0R5WRsciR7iaJ5S2h54DWa6Z6CEW+J4KgwyvRN3q3qDz0MibdfFXU0WqnRoi/9RSf/2XN4TfeaOCbQ==}
     dependencies:
       '@types/pg': 8.6.6
     dev: false
-    patched: true
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2170,7 +2164,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.26.5(@cloudflare/workers-types@4.20230518.0)(@neondatabase/serverless@0.4.9)(postgres@3.3.5):
+  /drizzle-orm@0.26.5(@cloudflare/workers-types@4.20230518.0)(@neondatabase/serverless@0.4.3)(postgres@3.3.5):
     resolution: {integrity: sha512-ajjbOIoXqldWoWBn0RbVQCCT732R4Ad+gUjUrlmMpzWYwgnbG/qqPy84NhHntQ/MR//z3xfvT1Z2fD8uCAPX3g==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -2233,7 +2227,7 @@ packages:
         optional: true
     dependencies:
       '@cloudflare/workers-types': 4.20230518.0
-      '@neondatabase/serverless': 0.4.9(patch_hash=dar6ggli2gbiuraofmistmcgtu)
+      '@neondatabase/serverless': 0.4.3
       postgres: 3.3.5
     dev: false
 

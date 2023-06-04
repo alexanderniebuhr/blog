@@ -1,5 +1,13 @@
 # yaml-language-server: $schema=https://moonrepo.dev/schemas/project.json
+
+type: "library" 
+language: 'typescript'
+
 tasks:
+  trigger:
+    inputs:
+      - 'src/**/*'
+
   generate:
     command: "drizzle-kit generate:pg"
     options:

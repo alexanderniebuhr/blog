@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://moonrepo.dev/schemas/project.json
+
+type: "library"
+language: 'typescript'
+
+tasks:
+  trigger:
+    inputs:
+      - 'src/**/*'
+    deps:
+      - "^:trigger"

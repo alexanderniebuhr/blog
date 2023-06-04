@@ -16,11 +16,12 @@ import { trpcAstro } from "../scripts/client";
 const users = await trpcAstro(env.CF_PAGES_URL).users.getById.query({
   id: "1",
 });
+import { test } from "@alexanderniebuhr/blog-trcp";
 ---
 
 <Wrapper>
   <div>
-    <p>Hello world, this is Alex! This is a short paragraph.</p>
+    <p>{test}, this is Alex! This is a short paragraph.</p>
     {JSON.stringify(users)}
     <MyClientComponent client:only />
   </div>

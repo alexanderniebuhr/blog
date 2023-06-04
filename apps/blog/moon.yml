@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=https://moonrepo.dev/schemas/project.json
 
 type: 'application'
+language: 'typescript'
 
 fileGroups:
   astro:
@@ -15,6 +16,8 @@ tasks:
     env:
       STATE: 'building'
     command: "astro build"
+    deps:
+      - "^:trigger"
     inputs:
       - '@group(astro)'
     outputs:
@@ -26,21 +29,25 @@ tasks:
     command: "nodemon --watch 'src/**/*' --ext astro,tsx,ts --exec \"moon run blog:build\""
     options:
       persistent: true
+      runInCI: false
       cache: false
 
   preview:
-    command: 'wrangler pages dev dist --live-reload'
+    command: 'wrangler pages dev dist'
     deps:
-      - '~:watch'
+      - '~:build'
     options: 
       persistent: true
+      runInCI: false
       cache: false
 
   # Development server
   dev:
     command: "astro dev"
+    local: true
     options:
       persistent: true
+      runInCI: false
       cache: false
 
   ccheck:
