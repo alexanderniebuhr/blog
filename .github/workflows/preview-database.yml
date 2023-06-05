@@ -13,7 +13,7 @@ jobs:
         id: pr_sha
         env:
           SHA: ${{ github.event.pull_request.base.sha }}
-        run: echo "::set-output name=sha::$SHA"
+        run: echo "sha=$SHA" >> $GITHUB_OUTPUT
       # - uses: neondatabase/create-branch-action@v3
       #   id: create_branch
       #   with:
