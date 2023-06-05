@@ -31,8 +31,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3.5.2
       - name: Get PR sha
+        env:
+          TEST: ${{ github.event.pull_request.head.ref }}
         run: |
-          echo $github.event.pull_request.head.sha
+          echo $TEST
       # - uses: neondatabase/create-branch-action@v3
       #   id: create_branch
       #   with:
