@@ -17,13 +17,8 @@ jobs:
           branch_name: ${{ github.event.pull_request.base.sha }}
           username: ${{ secrets.PG_USERNAME }}
           password: ${{ secrets.PG_PASSWORD }}
-      # - name: Comment on Pull Request
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     ISSUE_URL: ${{ github.event.issue.html_url }}
-      #   run: |
-      #     gh issue edit $ISSUE_URL --add-label "triage"
-      #     gh pr comment $PR_NUMBER --body `
-      #       Hi from GitHub CLI
-      #       Neon branch :elephant: : https://console.neon.tech/app/projects/${{ secrets.NEON_PROJECT_ID }}/branches/${{ steps.create_branch.outputs.branch_id }}
-      # `
+      - name: Comment on Pull Request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment 1 --body `Hi from GitHub CLI\nNeon branch :elephant: : https://console.neon.tech/app/projects/${{ vars.NEON_PROJECT_ID }}/branches/${{ steps.create_branch.outputs.branch_id }}`
