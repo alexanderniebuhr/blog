@@ -3,13 +3,39 @@ name: Deploy Preview
 on:
   pull_request:
 
+#     curl --request POST \
+#      --url https://console.neon.tech/api/v2/projects/ancient-hat-488165/branches \
+#      --header 'accept: application/json' \
+#      --header 'authorization: Bearer 9cip0pyjy0m0egs5hzf4e3u2p33wovdzlwaqk086nxalu78l8bw55zictb9jj0sq' \
+#      --header 'content-type: application/json' \
+#      --data '
+# {
+#   "endpoints": [
+#     {
+#       "type": "read_write",
+#       "autoscaling_limit_max_cu": 0.25,
+#       "autoscaling_limit_min_cu": 0.25,
+#       "suspend_timeout_seconds": 120
+#     }
+#   ],
+#   "branch": {
+#     "name": "test"
+#   }
+# }
+# '
+
 jobs:
   neon:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v3.5.2
+      - name: Get PR sha
+        id: get_pull_request_sha
+        run: |
+          pull_request_sha=$(jq --raw-output .pull_request.base.sha "$GITHUB_EVENT_PATH" | cut -c1-8)
+          echo "pull_request_sha=${pull_request_sha}" >> $GITHUB_OUTPUT
+          echo $pull_request_sha
       - uses: neondatabase/create-branch-action@v3
         id: create_branch
         with:
@@ -18,8 +44,7 @@ jobs:
           branch_name: ${{ github.event.pull_request.base.sha }}
           username: ${{ secrets.PG_USERNAME }}
           password: ${{ secrets.PG_PASSWORD }}
-      - name: Comment on Pull Request
-        env:
+      - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh pr comment 1 --body "Hi from GitHub CLI\nNeon branch :elephant: : https://console.neon.tech/app/projects/${{ vars.NEON_PROJECT_ID }}/branches/${{ steps.create_branch.outputs.branch_id }}"
