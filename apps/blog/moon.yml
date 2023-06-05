@@ -23,14 +23,14 @@ tasks:
     outputs:
       - 'dist'
 
-  # Production build
-  watch:
-    env:
-    command: "nodemon --watch 'src/**/*' --ext astro,tsx,ts --exec \"moon run blog:build\""
-    options:
-      persistent: true
-      runInCI: false
-      cache: false
+  # # Production build
+  # watch:
+  #   env:
+  #   command: "nodemon --watch 'src/**/*' --ext astro,tsx,ts --exec \"moon run blog:build\""
+  #   options:
+  #     persistent: true
+  #     runInCI: false
+  #     cache: false
 
   preview:
     command: 'wrangler pages dev dist'

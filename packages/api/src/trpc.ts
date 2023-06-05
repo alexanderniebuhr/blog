@@ -31,8 +31,7 @@ interface Env {
  */
 export function createTRPCContext({ req, resHeaders }: FetchCreateContextFnOptions) {
 	const runtime = getRuntime(req)
-	console.log("runtime", runtime)
-	// console.log("pool", Pool)
+	console.log("runtime", JSON.stringify(runtime, null, 2))
 	const client = new Pool({ connectionString: runtime.env.DATABASE_URL })
 	const db = drizzle(client)
 

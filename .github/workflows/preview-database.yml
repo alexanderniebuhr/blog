@@ -1,0 +1,34 @@
+name: Deploy Preview
+
+on:
+  pull_request:
+
+jobs:
+  neon:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.2
+      - name: Get Pull Request SHA
+        id: pr_sha
+        env:
+          SHA: ${{ github.event.pull_request.base.sha }}
+        run: echo "::set-output name=sha::$SHA"
+      # - uses: neondatabase/create-branch-action@v3
+      #   id: create_branch
+      #   with:
+      #     api_key: ${{ secrets.NEON_API_KEY }}
+      #     project_id: ${{ vars.NEON_PROJECT_ID }}
+      #     branch_name: ${{steps.pr_sha.outputs.sha}}
+      #     username: ${{ secrets.PG_USERNAME }}
+      #     password: ${{ secrets.PG_PASSWORD }}
+      # - name: Comment on Pull Request
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     ISSUE_URL: ${{ github.event.issue.html_url }}
+      #   run: |
+      #     gh issue edit $ISSUE_URL --add-label "triage"
+      #     gh pr comment $PR_NUMBER --body `
+      #       Hi from GitHub CLI
+      #       Neon branch :elephant: : https://console.neon.tech/app/projects/${{ secrets.NEON_PROJECT_ID }}/branches/${{ steps.create_branch.outputs.branch_id }}
+      # `
