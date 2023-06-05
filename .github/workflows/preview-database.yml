@@ -31,20 +31,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3.5.2
       - name: Get PR sha
-        id: get_pull_request_sha
         run: |
-          pull_request_sha=$(jq --raw-output .pull_request.base.sha "$GITHUB_EVENT_PATH" | cut -c1-8)
-          echo "pull_request_sha=${pull_request_sha}" >> $GITHUB_OUTPUT
-          echo $pull_request_sha
-      - uses: neondatabase/create-branch-action@v3
-        id: create_branch
-        with:
-          api_key: ${{ secrets.NEON_API_KEY }}
-          project_id: ${{ vars.NEON_PROJECT_ID }}
-          branch_name: ${{ github.event.pull_request.base.sha }}
-          username: ${{ secrets.PG_USERNAME }}
-          password: ${{ secrets.PG_PASSWORD }}
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh pr comment 1 --body "Hi from GitHub CLI\nNeon branch :elephant: : https://console.neon.tech/app/projects/${{ vars.NEON_PROJECT_ID }}/branches/${{ steps.create_branch.outputs.branch_id }}"
+          echo $github.event.pull_request.head.sha
+      # - uses: neondatabase/create-branch-action@v3
+      #   id: create_branch
+      #   with:
+      #     api_key: ${{ secrets.NEON_API_KEY }}
+      #     project_id: ${{ vars.NEON_PROJECT_ID }}
+      #     branch_name: ${{ github.event.pull_request.base.sha }}
+      #     username: ${{ secrets.PG_USERNAME }}
+      #     password: ${{ secrets.PG_PASSWORD }}
+      # - env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     gh pr comment 1 --body "Hi from GitHub CLI\nNeon branch :elephant: : https://console.neon.tech/app/projects/${{ vars.NEON_PROJECT_ID }}/branches/${{ steps.create_branch.outputs.branch_id }}"
