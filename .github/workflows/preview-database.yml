@@ -9,19 +9,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.2
-      - name: Get Pull Request SHA
-        id: pr_sha
-        env:
-          SHA: ${{ github.event.pull_request.base.sha }}
-        run: echo "sha=$SHA" >> $GITHUB_OUTPUT
-      # - uses: neondatabase/create-branch-action@v3
-      #   id: create_branch
-      #   with:
-      #     api_key: ${{ secrets.NEON_API_KEY }}
-      #     project_id: ${{ vars.NEON_PROJECT_ID }}
-      #     branch_name: ${{steps.pr_sha.outputs.sha}}
-      #     username: ${{ secrets.PG_USERNAME }}
-      #     password: ${{ secrets.PG_PASSWORD }}
+      - uses: neondatabase/create-branch-action@v3
+        id: create_branch
+        with:
+          api_key: ${{ secrets.NEON_API_KEY }}
+          project_id: ${{ vars.NEON_PROJECT_ID }}
+          branch_name: ${{ github.event.pull_request.base.sha }}
+          username: ${{ secrets.PG_USERNAME }}
+          password: ${{ secrets.PG_PASSWORD }}
       # - name: Comment on Pull Request
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
