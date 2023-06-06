@@ -1,33 +1,33 @@
 {
-	"name": "@alexanderniebuhr/blog-app",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"preview": "wrangler pages dev ./dist --log-level debug --compatibility-date=2023-05-12"
-	},
-	"dependencies": {
-		"@astrojs/cloudflare": "6.3.0",
-		"@astrojs/markdoc": "0.3.1",
-		"@astrojs/prefetch": "0.2.3",
-		"@astrojs/react": "2.2.1",
-		"@astrojs/rss": "2.4.3",
-		"@astrojs/sitemap": "1.3.3",
-		"@cloudflare/pages-plugin-sentry": "1.1.1",
-		"@t3-oss/env-core": "0.4.0",
-		"@trpc/client": "10.29.0",
-		"@trpc/server": "10.29.0",
-		"astro": "2.5.7",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"rollup": "3.23.0",
-		"sitemap": "7.1.1",
-		"@alexanderniebuhr/blog-trcp": "workspace:*",
-		"web-vitals": "3.3.2",
-		"zod": "3.21.4"
-	},
-	"devDependencies": {
-		"@miniflare/tre": "3.0.0-next.13",
-		"vite": "4.3.9",
-		"wrangler": "3.0.1"
-	}
+  "name": "@alexanderniebuhr/blog-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "wrangler pages dev ./dist --log-level debug --compatibility-date=2023-05-12"
+  },
+  "dependencies": {
+    "@alexanderniebuhr/blog-trcp": "workspace:*",
+    "@astrojs/cloudflare": "6.4.0",
+    "@astrojs/markdoc": "0.3.1",
+    "@astrojs/prefetch": "0.2.3",
+    "@astrojs/react": "2.2.1",
+    "@astrojs/rss": "2.4.3",
+    "@astrojs/sitemap": "1.3.3",
+    "@cloudflare/pages-plugin-sentry": "1.1.1",
+    "@t3-oss/env-core": "0.4.0",
+    "@trpc/client": "10.29.1",
+    "@trpc/server": "10.29.1",
+    "astro": "2.6.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rollup": "3.23.1",
+    "sitemap": "7.1.1",
+    "web-vitals": "3.3.2",
+    "zod": "3.21.4"
+  },
+  "devDependencies": {
+    "@miniflare/tre": "3.0.0-next.13",
+    "vite": "4.3.9",
+    "wrangler": "3.0.1"
+  }
 }

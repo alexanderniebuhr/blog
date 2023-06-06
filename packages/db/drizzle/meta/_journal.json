@@ -1,13 +1,13 @@
 {
-	"version": "5",
-	"dialect": "pg",
-	"entries": [
-		{
-			"idx": 0,
-			"version": "5",
-			"when": 1685815453002,
-			"tag": "0000_worried_thunderbird",
-			"breakpoints": false
-		}
-	]
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1685815453002,
+      "tag": "0000_worried_thunderbird",
+      "breakpoints": false
+    }
+  ]
 }

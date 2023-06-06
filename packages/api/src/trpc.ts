@@ -1,11 +1,11 @@
-import type { inferAsyncReturnType } from "@trpc/server"
-import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch"
+import type { inferAsyncReturnType } from '@trpc/server'
+import type { FetchCreateContextFnOptions } from '@trpc/server/adapters/fetch'
 
-import { getRuntime } from "@astrojs/cloudflare/runtime"
-import { initTRPC } from "@trpc/server"
-import { ZodError } from "zod"
+import { getRuntime } from '@astrojs/cloudflare/runtime'
+import { initTRPC } from '@trpc/server'
+import { ZodError } from 'zod'
 
-import { Pool, drizzle } from "@alexanderniebuhr/blog-db"
+import { drizzle, Pool } from '@alexanderniebuhr/blog-db'
 
 /**
  * 1. CONTEXT
@@ -14,7 +14,6 @@ import { Pool, drizzle } from "@alexanderniebuhr/blog-db"
  *
  * These allow you to access things like the database, the session, etc, when
  * processing a request
- *
  */
 type CreateContextOptions = {
 	DATABASE_URL: string
@@ -29,9 +28,11 @@ interface Env {
  * process every request that goes through your tRPC endpoint
  * @link https://trpc.io/docs/context
  */
-export function createTRPCContext({ req, resHeaders }: FetchCreateContextFnOptions) {
+export function createTRPCContext(
+	{ req, resHeaders }: FetchCreateContextFnOptions,
+) {
 	const runtime = getRuntime(req)
-	console.log("runtime", JSON.stringify(runtime, null, 2))
+	console.log('runtime', JSON.stringify(runtime, null, 2))
 	const client = new Pool({ connectionString: runtime.env.DATABASE_URL })
 	const db = drizzle(client)
 
@@ -52,7 +53,9 @@ const t = initTRPC.context<Context>().create({
 			...shape,
 			data: {
 				...shape.data,
-				zodError: error.cause instanceof ZodError ? error.cause.flatten() : null,
+				zodError: error.cause instanceof ZodError
+					? error.cause.flatten()
+					: null,
 			},
 		}
 	},

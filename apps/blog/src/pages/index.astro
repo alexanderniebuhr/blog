@@ -14,14 +14,14 @@ console.log(env.PUBLIC_API_URL);
 
 import { trpcAstro } from "../scripts/client";
 const users = await trpcAstro(env.CF_PAGES_URL).users.getById.query({
-  id: "d13d8a1f-a369-4e55-a93e-cc46e0a16309",
+	id: "d13d8a1f-a369-4e55-a93e-cc46e0a16309",
 });
 ---
 
 <Wrapper>
-  <div>
-    <p>Hello World, this is Alex! This is a short paragraph.</p>
-    {JSON.stringify(users)}
-    <MyClientComponent client:only />
-  </div>
+	<div>
+		<p>Hello World, this is Alex! This is a short paragraph.</p>
+		{JSON.stringify(users)}
+		<MyClientComponent client:only />
+	</div>
 </Wrapper>

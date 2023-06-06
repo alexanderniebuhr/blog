@@ -1,8 +1,8 @@
-import type { AppRouter } from "./root.ts"
-import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server"
+import type { inferRouterInputs, inferRouterOutputs } from '@trpc/server'
+import type { AppRouter } from './root.ts'
 
-export { appRouter, type AppRouter } from "./root.ts"
-export { createTRPCContext } from "./trpc.ts"
+export { type AppRouter, appRouter } from './root.ts'
+export { createTRPCContext } from './trpc.ts'
 
 // /**
 //  * Inference helpers for input types

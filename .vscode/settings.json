@@ -1,16 +1,41 @@
 {
-	"[typescript]": {
-		"editor.defaultFormatter": "rome.rome"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "rome.rome"
-	},
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"stylelint.validate": [
-		"css",
-		"less",
-		"postcss",
-		"html",
-		"astro"
-	],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "html",
+    "astro"
+  ],
+  "[astro]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  }
+  // "eslint.validate": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   "typescript",
+  //   "typescriptreact",
+  //   "astro"
+  // ],
+  // "eslint.experimental.useFlatConfig": false,
+  // "eslint.lintTask.enable": true,
+  // "eslint.packageManager": "pnpm"
 }

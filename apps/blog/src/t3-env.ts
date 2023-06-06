@@ -1,8 +1,8 @@
-import { createEnv } from "@t3-oss/env-core"
-import { z } from "zod"
+import { createEnv } from '@t3-oss/env-core'
+import { z } from 'zod'
 
-const isServer = typeof window === "undefined"
-const isBuild = isServer && process.env.STATE === "building"
+const isServer = typeof window === 'undefined'
+const isBuild = isServer && process.env.STATE === 'building'
 
 const serverVariables = {
 	build: {
@@ -16,18 +16,20 @@ const serverVariables = {
 }
 
 export const createRuntimeEnv = (prop?: unknown) => {
-	const rEnv = prop as Record<string, string | number | boolean | undefined>
+	const rEnv = { ...prop } as
+		| Record<string, boolean | number | string | undefined>
+		| undefined
 	return createEnv({
-		skipValidation:
-			isServer &&
+		skipValidation: isServer &&
 			!!process.env.SKIP_ENV_VALIDATION &&
-			process.env.SKIP_ENV_VALIDATION !== "false" &&
-			process.env.SKIP_ENV_VALIDATION !== "0",
+			process.env.SKIP_ENV_VALIDATION !== 'false' &&
+			process.env.SKIP_ENV_VALIDATION !== '0',
 		server: (isBuild
 			? serverVariables.build
-			: { ...serverVariables.runtime, ...serverVariables.build }) as typeof serverVariables.build &
-			typeof serverVariables.runtime,
-		clientPrefix: "PUBLIC_",
+			: { ...serverVariables.runtime, ...serverVariables.build }) as
+				& typeof serverVariables.build
+				& typeof serverVariables.runtime,
+		clientPrefix: 'PUBLIC_',
 		client: {
 			PUBLIC_API_URL: z.string(),
 		},

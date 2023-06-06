@@ -1,6 +1,6 @@
-import type { AppRouter } from "@alexanderniebuhr/blog-trcp"
+import type { AppRouter } from '@alexanderniebuhr/blog-trcp'
 
-import { createTRPCProxyClient, httpBatchLink } from "@trpc/client"
+import { createTRPCProxyClient, httpBatchLink } from '@trpc/client'
 
 // export const createTrpcClient = (serverUrl: string) => createTRPCProxyClient<AppRouter>({
 export const trpcAstro = (serverUrl: string) =>

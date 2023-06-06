@@ -1,9 +1,9 @@
 // 1. Import utilities from `astro:content`
 // import { rssSchema } from "@astrojs/rss"
-import { defineCollection, reference, z } from "astro:content"
+import { defineCollection, reference, z } from 'astro:content'
 // Define your data collection(s) here.
 const authors = defineCollection({
-	type: "data",
+	type: 'data',
 	schema: z.object({
 		name: z.string(),
 		socialLink: z.string().url(),
@@ -11,11 +11,11 @@ const authors = defineCollection({
 })
 // 2. Define your content collection(s)
 const bitsCollection = defineCollection({
-	type: "content",
+	type: 'content',
 	schema: z.object({
 		title: z.string(),
 		// Reference a single author from the `authors` collection by `id`
-		author: reference("authors"),
+		author: reference('authors'),
 		// Reference an array of related posts from the `blog` collection by `slug`
 		// related: z.array(reference("blog")),
 	}),

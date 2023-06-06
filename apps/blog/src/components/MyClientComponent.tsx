@@ -1,4 +1,4 @@
-import { createRuntimeEnv } from "../t3-env"
+import { createRuntimeEnv } from '../t3-env'
 
 const env = createRuntimeEnv(import.meta.env)
 

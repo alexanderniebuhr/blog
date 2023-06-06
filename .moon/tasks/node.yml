@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://moonrepo.dev/schemas/tasks.json
-implicitInputs:
-  - 'package.json'
+# implicitInputs:
+#   - 'package.json'
   
 tasks:
     typecheck:
@@ -24,3 +24,15 @@ tasks:
         # outputs:
         #     # Matches `compilerOptions.outDir`
         #     - 'lib'
+    format:
+        command:
+            - 'dprint'
+            - 'check'
+            # Use the same config for the entire repo
+            - '--config'
+            - '@in(0)'
+            # - '--verbose'
+        inputs:
+            - '/dprint.json'
+            - 'src/**/*'
+            - '**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml,astro,svelte}'
