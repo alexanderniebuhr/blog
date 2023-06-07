@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://moonrepo.dev/schemas/tasks.json
-# implicitInputs:
-#   - 'package.json'
+implicitInputs:
+  - 'package.json'
   
 tasks:
     typecheck:

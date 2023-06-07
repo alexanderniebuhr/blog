@@ -8,7 +8,7 @@
   "dependencies": {
     "@alexanderniebuhr/blog-trcp": "workspace:*",
     "@astrojs/cloudflare": "6.4.0",
-    "@astrojs/markdoc": "0.3.1",
+    "@astrojs/markdoc": "0.3.2",
     "@astrojs/prefetch": "0.2.3",
     "@astrojs/react": "2.2.1",
     "@astrojs/rss": "2.4.3",
@@ -17,10 +17,10 @@
     "@t3-oss/env-core": "0.4.0",
     "@trpc/client": "10.29.1",
     "@trpc/server": "10.29.1",
-    "astro": "2.6.0",
+    "astro": "2.6.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rollup": "3.23.1",
+    "rollup": "3.24.0",
     "sitemap": "7.1.1",
     "web-vitals": "3.3.2",
     "zod": "3.21.4"
@@ -28,6 +28,6 @@
   "devDependencies": {
     "@miniflare/tre": "3.0.0-next.13",
     "vite": "4.3.9",
-    "wrangler": "3.0.1"
+    "wrangler": "3.1.0"
   }
 }
