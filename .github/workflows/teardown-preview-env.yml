@@ -10,6 +10,6 @@ jobs:
     steps:
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE_URL: ${{ github.event.issue.html_url }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
         run: |
-          gh issue edit $ISSUE_URL --add-label "triage"
+          gh issue edit $PR_URL --add-label "triage"
