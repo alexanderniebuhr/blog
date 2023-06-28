@@ -14,8 +14,9 @@ tasks:
       cache: false
 
   migrate:
+    platform: 'system'
     env:
-      DATABASE_URL: 'postgresql://alexanderniebuhr:4fAcCx1uWnwG@ep-throbbing-water-513878.us-east-2.aws.neon.tech/neondb'
-    command: "tsx migrate.ts"
+      DATABASE_URL: 'op://Personal/kem64bhmr376xrm7nyzfng47ye/connectionurls/DATABASE_URL'
+    command: "op run -- pnpm tsx migrate.ts"
     options:
       cache: false

@@ -16,8 +16,15 @@
   },
   "markdown": {},
   "toml": {},
-  "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml,astro,svelte}"],
-  "excludes": ["**/node_modules", ".moon"],
+  "includes": [
+    "**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml,astro,svelte}"
+  ],
+  "excludes": [
+    "**/node_modules",
+    ".moon",
+    "**/dist",
+    "**/.astro"
+  ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.85.0.wasm",
     "https://plugins.dprint.dev/json-0.17.3.wasm",

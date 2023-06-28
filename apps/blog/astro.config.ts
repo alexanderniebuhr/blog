@@ -1,4 +1,9 @@
 import cloudflare from '@astrojs/cloudflare'
+import icon from 'astro-icon'
+
+import browserslist from 'browserslist'
+import { browserslistToTargets } from 'lightningcss'
+
 import markdoc from '@astrojs/markdoc'
 // import prefetch from "@astrojs/prefetch"
 import react from '@astrojs/react'
@@ -25,6 +30,7 @@ try {
 export default defineConfig({
 	build: {
 		inlineStylesheets: 'auto',
+		split: false,
 	},
 	scopedStyleStrategy: 'class',
 	base: '/',
@@ -32,19 +38,36 @@ export default defineConfig({
 	experimental: {
 		assets: false,
 	},
-	integrations: [react(), markdoc(), /*prefetch() ,*/ sitemap()],
+	integrations: [
+		react(),
+		markdoc(),
+		icon({
+			include: {
+				carbon: ['*'], // Loads entire Material Design Icon set
+			},
+		}),
+		/*prefetch() ,*/
+		sitemap(),
+	],
 	output: 'hybrid',
 	adapter: cloudflare({
-		mode: 'advanced',
+		mode: 'directory',
 	}),
 	vite: {
-		// resolve: {
-		// 	alias: {
-		// 		"@alexanderniebuhr/blog-trcp": path.join(__dirname, "../../packages/api/src"),
-		// 	},
-		// },
+		experimental: {},
+		css: {
+			transformer: 'lightningcss',
+			lightningcss: {
+				targets: browserslistToTargets(browserslist('defaults')),
+				drafts: {
+					nesting: true,
+					customMedia: true,
+				},
+			},
+		},
 		build: {
 			minify: false,
+			cssMinify: 'lightningcss',
 		},
 		define: {
 			'process.env.VITE_TIME': JSON.stringify(process.env.VITE_TIME),

@@ -1,3 +1,13 @@
-[*.{json,yaml,yml}]
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.{json}]
+indent_style = space
+indent_size = 2
+
+[*.{yaml,yml}]
 indent_style = tab
 indent_size = 2

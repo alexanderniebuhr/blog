@@ -12,10 +12,17 @@ const serverVariables = {
 	runtime: {
 		// Put in here any server-side variable that is read at runtime
 		CF_PAGES_URL: z.string().nonempty(),
+		DATABASE_URL: z.string().nonempty(),
 	},
 }
 
 export const createRuntimeEnv = (prop?: unknown) => {
+	if (isBuild) {
+		console.log(
+			'Please make sure that following variables are set in your server runtime environment: ',
+			Object.keys(serverVariables.runtime).join(', '),
+		)
+	}
 	const rEnv = prop as
 		| Record<string, boolean | number | string | undefined>
 		| undefined

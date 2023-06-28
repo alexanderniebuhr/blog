@@ -1,1 +1,8 @@
-{ "extends": ["stylelint-config-standard", "stylelint-config-html/html", "stylelint-config-html/astro"] }
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-html/html",
+    "stylelint-config-html/svelte",
+    "stylelint-config-html/astro"
+  ]
+}

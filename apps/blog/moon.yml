@@ -13,6 +13,12 @@ fileGroups:
   other: []
 
 tasks:
+  stylelint:
+    command: stylelint "**/*.{css,less,postcss,html,svelte,astro}"
+    inputs:
+      - "@group(sources)"
+      - "@group(other)"
+
   astro:
     command: astro
     local: true

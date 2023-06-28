@@ -1,3 +1,5 @@
 ```sh
-pnpm update -i -r --latest
+  pnpm update -i -r --latest
 ```
+
+getCollection("blog", () => true)

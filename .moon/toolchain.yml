@@ -6,7 +6,7 @@
 node:
   # The version to use. Must be a semantic version that includes major, minor, and patch.
   # We suggest using the latest active LTS version: https://nodejs.org/en/about/releases
-  version: '20.2.0'
+  version: '20.3.1'
 
   # The package manager to use when managing dependencies.
   # Accepts "npm" (default), "pnpm", or "yarn".
@@ -14,7 +14,7 @@ node:
 
   # The version of the package manager (above) to use.
   pnpm: {
-    version: '8.6.1'
+    version: '8.6.5'
   }
 
   # Add `node.version` as a constraint in the root `package.json` `engines`.
