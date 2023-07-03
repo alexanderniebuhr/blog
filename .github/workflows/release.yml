@@ -41,7 +41,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: [lint, check, test]
-    # environment: test (Production)
+    environment: test (Production)
     name: Build
     steps:
       - uses: actions/checkout@v3.5.2
