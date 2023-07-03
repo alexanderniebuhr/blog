@@ -41,7 +41,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: [lint, check, test]
-    environment: test (Production)
+    # environment: test (Production)
     name: Build
     steps:
       - uses: actions/checkout@v3.5.2
@@ -57,13 +57,13 @@ jobs:
         run: moon run :build
       - uses: actions/upload-artifact@v3.1.2
         with:
-          name: dist
+          name: build
           path: |
             apps/blog/dist
+            apps/blog/functions
   deploy:
     runs-on: ubuntu-latest
     needs: [lint, check, test, build]
-    environment: test (Production)
     permissions:
       contents: read
       deployments: write
@@ -72,13 +72,13 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3.0.2
         with:
-          name: dist
-          path: dist
+          name: build
       # - uses: nrwl/nx-set-shas@v3
       # - uses: pnpm/action-setup@v2.2.4
       # - uses: actions/setup-node@v3.6.0
       #   with:
       #     node-version-file: '.nvmrc'
+      - run: ls -la
       - uses: moonrepo/setup-moon-action@v1.1.1
       - name: Publish
         id: publish
