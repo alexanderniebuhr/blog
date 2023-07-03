@@ -12,5 +12,6 @@
     "editor.defaultFormatter": "dprint.dprint"
   },
   "eslint.runtime": "/Users/alexanderniebuhr/.proto/tools/node/20.3.1/bin/node",
-  "eslint.trace.server": "off"
+  "eslint.trace.server": "off",
+  "dprint.path": "./node_modules/.bin/dprint"
 }
