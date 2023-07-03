@@ -27,8 +27,8 @@ importers:
         specifier: 18.2.6
         version: 18.2.6
       dprint:
-        specifier: 0.38.2
-        version: 0.38.2
+        specifier: 0.37.1
+        version: 0.37.1
       nodemon:
         specifier: 2.0.22
         version: 2.0.22
@@ -664,60 +664,6 @@ packages:
     dependencies:
       postcss-selector-parser: 6.0.13
     dev: true
-
-  /@dprint/darwin-arm64@0.38.2:
-    resolution: {integrity: sha512-1aZO3y7js1A29uEHDjfZIU1KLPdsSvoD9RQojPfIeZnN7sRdR+N7ufmS+ovwFPVvNo7DjIk/8w8OmXBPnU0ckw==}
-    cpu: [arm64]
-    os: [darwin]
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@dprint/darwin-x64@0.38.2:
-    resolution: {integrity: sha512-NW9yVvFUfH1FV5gHG+BZ/pwJgoDlqIGCa9VNRKFOWf7FSaFXX/IZYvJtmO+KuJ48EJrZVhVVt+4vliMntLygmQ==}
-    cpu: [x64]
-    os: [darwin]
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@dprint/linux-arm64-glibc@0.38.2:
-    resolution: {integrity: sha512-2f7GFtjAGsVyZSq0p3ec7fe0rRhVnUM4oxwLQ5Y0xCFGLrF9H40/IkwNGkyps/4KsDjiXC0GLHD394/UprrNnw==}
-    cpu: [arm64]
-    os: [linux]
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@dprint/linux-x64-glibc@0.38.2:
-    resolution: {integrity: sha512-4h7Km5tjVzhLmlG6Qp+/OIjo67HBpiWolyJw5eXS4NtsswnsV/jBVN/rFlHm2OnSqLb0Ir4hlB5TWIK5vkbIVg==}
-    cpu: [x64]
-    os: [linux]
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@dprint/linux-x64-musl@0.38.2:
-    resolution: {integrity: sha512-jDo3bgnycH8HiqpzO/MSiJCks2vnOLBQFK+afesTBY4vLgFa5V3+7HME8udKdEovulHWHUpK8nQ4l7mEMucLhA==}
-    cpu: [x64]
-    os: [linux]
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@dprint/win32-x64@0.38.2:
-    resolution: {integrity: sha512-uCEzWvNC5Sww2UvPEjo8hzuwSYJNZGl2NPcC2J9t6g2Ta/HYf743WHf8mIb6Ht3V3R3ql+cFxuwYROaZSHl0NQ==}
-    cpu: [x64]
-    os: [win32]
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /@drizzle-team/studio@0.0.1:
     resolution: {integrity: sha512-cHgGezy2ojBFMaU6PZyBkksgFsg2CQ8IRN4mS7WdbA/Zv6xUK6fCNmpEWS/FftbxoA4B8Z0XGnuKsaTJEZsGgA==}
@@ -1729,6 +1675,15 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  /agent-base@6.0.2:
+    resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
+    engines: {node: '>= 6.0.0'}
+    dependencies:
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /ajv@8.12.0:
     resolution: {integrity: sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA==}
     dependencies:
@@ -2019,7 +1974,6 @@ packages:
 
   /buffer-crc32@0.2.13:
     resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==}
-    dev: false
 
   /buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
@@ -2498,16 +2452,15 @@ packages:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  /dprint@0.38.2:
-    resolution: {integrity: sha512-UygHZYpO4I2QEmnHUjNl8jtCj5zVZo8AXdt5iqF7+tou7gBBYey3OeR75l8Ohx2D970JxwtPrUjsSYfhA9apCw==}
+  /dprint@0.37.1:
+    resolution: {integrity: sha512-MVKIVOvk5FSiZQFFZlLv1KiB4zZXAirlZ/m8vtyKu2PTFnkD5d6jVv4aNHvd7M6f1ToganNZ/CqhSwpgadn8Ug==}
     hasBin: true
-    optionalDependencies:
-      '@dprint/darwin-arm64': 0.38.2
-      '@dprint/darwin-x64': 0.38.2
-      '@dprint/linux-arm64-glibc': 0.38.2
-      '@dprint/linux-x64-glibc': 0.38.2
-      '@dprint/linux-x64-musl': 0.38.2
-      '@dprint/win32-x64': 0.38.2
+    requiresBuild: true
+    dependencies:
+      https-proxy-agent: 5.0.1
+      yauzl: 2.10.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /dreamopt@0.8.0:
@@ -2958,7 +2911,6 @@ packages:
     resolution: {integrity: sha512-cE1qsB/VwyQozZ+q1dGxR8LBYNZeofhEdUNGSMbQD3Gw2lAzX9Zb3uIU6Ebc/Fmyjo9AWWfnn0AUCHqtevs/8g==}
     dependencies:
       pend: 1.2.0
-    dev: false
 
   /file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
@@ -3313,6 +3265,16 @@ packages:
 
   /http-cache-semantics@4.1.1:
     resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
+    dev: true
+
+  /https-proxy-agent@5.0.1:
+    resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
+    engines: {node: '>= 6'}
+    dependencies:
+      agent-base: 6.0.2
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /human-signals@2.1.0:
@@ -4586,7 +4548,6 @@ packages:
 
   /pend@1.2.0:
     resolution: {integrity: sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg==}
-    dev: false
 
   /pg-int8@1.0.1:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
@@ -6153,7 +6114,6 @@ packages:
     dependencies:
       buffer-crc32: 0.2.13
       fd-slicer: 1.1.0
-    dev: false
 
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
