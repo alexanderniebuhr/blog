@@ -23,7 +23,7 @@
     "tsconfig-moon": "1.3.0",
     "typescript": "5.1.6"
   },
-  "packageManager": "pnpm@8.6.6",
+  "packageManager": "pnpm@8.6.5",
   "pnpm": {
     "overrides": {
       "astro>vite": "4.4.0-beta.3"

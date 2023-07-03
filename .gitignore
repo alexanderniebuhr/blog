@@ -27,4 +27,4 @@ wrangler.toml
 # macOS-specific files
 .DS_Store
 
-.astro
+# .astro
