@@ -19,7 +19,7 @@ jobs:
         with:
           fetch-depth: 0
       - uses: moonrepo/setup-moon-action@v1.1.1
-      - run: moon run :format
+      - run: moon run :lint
   check:
     runs-on: ubuntu-latest
     name: Check
@@ -28,7 +28,7 @@ jobs:
         with:
           fetch-depth: 0
       - uses: moonrepo/setup-moon-action@v1.1.1
-      - run: moon run :lint
+      - run: moon run :typecheck
   test:
     runs-on: ubuntu-latest
     name: Test
