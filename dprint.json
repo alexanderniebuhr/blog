@@ -23,7 +23,8 @@
     "**/node_modules",
     ".moon",
     "**/dist",
-    "**/.astro"
+    "**/.astro",
+    "**/functions"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.85.0.wasm",

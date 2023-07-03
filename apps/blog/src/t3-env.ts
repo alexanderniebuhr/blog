@@ -1,5 +1,5 @@
 import { createEnv } from '@t3-oss/env-core'
-import { z } from 'zod'
+import { z, ZodError } from 'zod'
 
 const isServer = typeof window === 'undefined'
 const isBuild = isServer && process.env.STATE === 'building'
@@ -27,6 +27,14 @@ export const createRuntimeEnv = (prop?: unknown) => {
 		| Record<string, boolean | number | string | undefined>
 		| undefined
 	return createEnv({
+		onValidationError: (error: ZodError) => {
+			console.error(
+				'❌ Invalid environment variables:',
+				error.flatten().fieldErrors,
+			)
+			process.exit(1)
+		},
+		// onInvalidAccess: (error: ZodError) => { },
 		skipValidation: isServer &&
 			!!process.env.SKIP_ENV_VALIDATION &&
 			process.env.SKIP_ENV_VALIDATION !== 'false' &&

@@ -11,14 +11,9 @@ import sitemap from '@astrojs/sitemap'
 import { defineConfig } from 'astro/config'
 import { loadEnv } from 'vite'
 
-try {
-	await import('./src/t3-env').then((m) =>
-		m.createRuntimeEnv(loadEnv(import.meta.env.MODE, process.cwd(), ''))
-	)
-} catch (error) {
-	console.error(error)
-	process.exit(1)
-}
+await import('./src/t3-env').then((m) =>
+	m.createRuntimeEnv(loadEnv(import.meta.env.MODE, process.cwd(), ''))
+)
 
 // import { fileURLToPath } from "url"
 // import path from "path"
@@ -30,7 +25,7 @@ try {
 export default defineConfig({
 	build: {
 		inlineStylesheets: 'auto',
-		split: false,
+		split: true,
 	},
 	scopedStyleStrategy: 'class',
 	base: '/',

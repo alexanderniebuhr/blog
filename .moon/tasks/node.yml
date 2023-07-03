@@ -3,12 +3,32 @@ implicitInputs:
   - 'package.json'
   
 tasks:
+    format:
+        command:
+            - 'dprint'
+            - 'fmt'
+            - '--config'
+            - '@in(0)'
+            # - '--verbose'
+        inputs:
+            - '/dprint.json'
+            - '**/*'
+
+    lint:
+        command:
+            - 'dprint'
+            - 'check'
+            - '--config'
+            - '@in(0)'
+            # - '--verbose'
+        inputs:
+            - '/dprint.json'
+            - '**/*'
+
     typecheck:
         command:
             - 'tsc'
-            # Use incremental builds with project references
             - '--build'
-            # Use verbose logging to see affected projects
             # - '--verbose'
         inputs:
             # Source and test files
@@ -21,15 +41,3 @@ tasks:
             - 'tsconfig.*.json'
             # Root configs (extended from only)
             - '/tsconfig.options.json'
-    format:
-        command:
-            - 'dprint'
-            - 'check'
-            # Use the same config for the entire repo
-            - '--config'
-            - '@in(0)'
-            # - '--verbose'
-        inputs:
-            - '/dprint.json'
-            - 'src/**/*'
-            - '**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml,astro,svelte}'
