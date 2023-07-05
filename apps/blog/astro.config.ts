@@ -38,13 +38,14 @@ export default defineConfig({
 		markdoc(),
 		icon({
 			include: {
-				carbon: ['*'], // Loads entire Material Design Icon set
+				carbon: ['3d-cursor'],
+				charm: ['anchor', 'flame'],
 			},
 		}),
 		/*prefetch() ,*/
 		sitemap(),
 	],
-	output: 'hybrid',
+	output: 'server',
 	adapter: cloudflare({
 		mode: 'directory',
 	}),
@@ -61,7 +62,7 @@ export default defineConfig({
 			},
 		},
 		build: {
-			minify: false,
+			minify: true,
 			cssMinify: 'lightningcss',
 		},
 		define: {

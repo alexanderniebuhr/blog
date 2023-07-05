@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://moonrepo.dev/schemas/workspace.json
 
 projects:
-  # acutal website
+  # actual website
   blog: 'apps/blog'
   # local-only (can be typescript only)
   api: 'packages/api'

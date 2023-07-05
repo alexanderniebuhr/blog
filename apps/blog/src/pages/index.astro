@@ -1,7 +1,7 @@
 ---
 export const prerender = false;
 
-import { Icon } from "astro-icon/components";
+// import { Icon } from "astro-icon/components";
 
 import { getRuntime } from "@astrojs/cloudflare/runtime";
 
@@ -25,7 +25,7 @@ console.log(process.env);
 <Wrapper>
 	<div>
 		<p>Hello World, this is Alex! This is a short paragraph.</p>
-		<Icon name="carbon:3d-cursor" />
+		<!-- <Icon name="carbon:3d-cursor" /> -->
 		<!-- {JSON.stringify(users)} -->
 		<MyClientComponent client:only />
 	</div>

@@ -14,6 +14,8 @@ const bitsCollection = defineCollection({
 	type: 'content',
 	schema: z.object({
 		title: z.string(),
+		description: z.string(),
+		pubDate: z.string(),
 		// Reference a single author from the `authors` collection by `id`
 		author: reference('authors'),
 		// Reference an array of related posts from the `blog` collection by `slug`

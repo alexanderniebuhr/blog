@@ -15,22 +15,23 @@
     "@astrojs/sitemap": "1.3.3",
     "@cloudflare/pages-plugin-sentry": "1.1.1",
     "@t3-oss/env-core": "0.6.0",
-    "@trpc/client": "10.33.0",
-    "@trpc/server": "10.33.0",
-    "astro": "2.7.3",
+    "@trpc/client": "10.33.1",
+    "@trpc/server": "10.33.1",
+    "astro": "2.7.4",
     "astro-icon": "next",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rollup": "3.26.0",
+    "rollup": "3.26.1",
     "sitemap": "7.1.1",
     "web-vitals": "3.3.2",
     "zod": "3.21.4"
   },
   "devDependencies": {
     "@iconify-json/carbon": "1.1.18",
+    "@iconify-json/charm": "1.1.8",
     "@miniflare/tre": "3.0.0-next.13",
     "browserslist": "4.21.9",
-    "lightningcss": "1.21.3",
+    "lightningcss": "1.21.5",
     "vite": "4.3.9",
     "wrangler": "3.1.1"
   }
