@@ -20,3 +20,6 @@ vcs:
 
 runner: 
   inheritColorsForPipedTasks: true
+
+experiments:
+  taskOutputBoundaries: true

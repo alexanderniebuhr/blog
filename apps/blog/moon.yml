@@ -9,7 +9,7 @@ fileGroups:
     - "src/**/*"
     - "astro.config.*"
   tests:
-    - 'tests/**/*'
+    - "tests/**/*"
   other: []
 
 tasks:

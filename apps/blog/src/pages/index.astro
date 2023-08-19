@@ -23,37 +23,34 @@ console.log(process.env);
 ---
 
 <Wrapper>
-	<div>
-		<p>Hello World, this is Alex! This is a short paragraph.</p>
-		<!-- <Icon name="carbon:3d-cursor" /> -->
-		<!-- {JSON.stringify(users)} -->
-		<MyClientComponent client:only />
-	</div>
+  <div>
+    <p>Hello World, this is Alex! This is a short paragraph.</p>
+    <!-- <Icon name="carbon:3d-cursor" /> -->
+    <!-- {JSON.stringify(users)} -->
+    <MyClientComponent client:only />
+  </div>
 </Wrapper>
 
 <style lang="scss">
-	.foo {
-		color: color-mix(in hsl, hsl(120deg 10% 20%) 25%, hsl(30deg 30% 40%));
-	}
-	.bar {
-		color: lch(from slateblue calc(l + 10%) c h);
-	}
-	.lab {
-		color: lab(40% 56.6 39);
-	}
-	.logo {
-		background: image-set(url(logo.png) 2x, url(logo.png) 1x);
-	}
-	.button {
-		-webkit-transition: background 200ms;
-		-moz-transition: background 200ms;
-		transition: background 200ms;
-	}
-	.test {
-		color: blue;
+  .foo {
+    color: color-mix(in hsl, hsl(120deg 10% 20%) 25%, hsl(30deg 30% 40%));
+  }
+  .bar {
+    color: lch(from slateblue calc(l + 10%) c h);
+  }
+  .lab {
+    color: lab(40% 56.6 39);
+  }
+  .button {
+    -webkit-transition: background 200ms;
+    -moz-transition: background 200ms;
+    transition: background 200ms;
+  }
+  .test {
+    color: blue;
 
-		.nest {
-			color: red;
-		}
-	}
+    .nest {
+      color: red;
+    }
+  }
 </style>

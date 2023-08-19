@@ -1,23 +1,24 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
     "composite": true,
     "declaration": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
-    "incremental": true,
-    "noEmitOnError": true,
-    "skipLibCheck": true,
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "inlineSources": false,
     "isolatedModules": true,
     "module": "ESNext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "NodeNext",
+    "noEmitOnError": true,
+    "removeComments": false,
+    "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "removeComments": false,
     "verbatimModuleSyntax": true
   }
 }

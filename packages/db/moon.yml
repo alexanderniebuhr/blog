@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=https://moonrepo.dev/schemas/project.json
 
-type: "library" 
-language: 'typescript'
+type: "library"
+language: "typescript"
 
 tasks:
   trigger:
     inputs:
-      - 'src/**/*'
+      - "src/**/*"
 
   generate:
     command: "drizzle-kit generate:pg"
@@ -14,9 +14,9 @@ tasks:
       cache: false
 
   migrate:
-    platform: 'system'
+    platform: "system"
     env:
-      DATABASE_URL: 'op://Personal/kem64bhmr376xrm7nyzfng47ye/connectionurls/DATABASE_URL'
+      DATABASE_URL: "op://Personal/kem64bhmr376xrm7nyzfng47ye/connectionurls/DATABASE_URL"
     command: "op run -- pnpm tsx migrate.ts"
     options:
       cache: false

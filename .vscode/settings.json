@@ -8,9 +8,13 @@
     "svelte",
     "astro"
   ],
-  "[astro][typescript][typescriptreact][javascript][javascriptreact][json][jsonc]": {
-    "editor.defaultFormatter": "dprint.dprint"
-  },
-  "eslint.runtime": "/Users/alexanderniebuhr/.proto/tools/node/20.3.1/bin/node",
-  "eslint.trace.server": "off",
+  "prettier.documentSelectors": [
+    "**/*.astro"
+  ],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+  // "[typescript][typescriptreact][javascript][javascriptreact][json][jsonc]": {
+  //   "editor.defaultFormatter": "dprint.dprint"
+  // },
 }

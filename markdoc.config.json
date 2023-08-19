@@ -1,6 +1,15 @@
 [
   {
-    "id": "blog",
-    "path": "apps/blog/src/content"
+    "id": "my-site",
+    "path": "apps/blog/src/content",
+    "schema": {
+      "path": "markdoc.config.mjs",
+      "type": "esm",
+      "property": "default",
+      "watch": true
+    },
+    "routing": {
+      "frontmatter": "route"
+    }
   }
 ]
