@@ -154,11 +154,11 @@ importers:
   packages/db:
     dependencies:
       '@neondatabase/serverless':
-        specifier: 0.4.26
-        version: 0.4.26
+        specifier: 0.6.0
+        version: 0.6.0
       drizzle-orm:
         specifier: 0.28.4
-        version: 0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
+        version: 0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.6.0)(@types/pg@8.10.2)(postgres@3.3.5)
       drizzle-zod:
         specifier: 0.5.0
         version: 0.5.0(drizzle-orm@0.28.4)(zod@3.22.2)
@@ -1452,8 +1452,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@neondatabase/serverless@0.4.26:
-    resolution: {integrity: sha512-6DYEKos2GYn8NTgcJf33BLAx//LcgqzHVavQWe6ZkaDqmEq0I0Xtub6pzwFdq9iayNdCj7e2b0QKr5a8QKB8kQ==}
+  /@neondatabase/serverless@0.6.0:
+    resolution: {integrity: sha512-qXxBRYN0m2v8kVQBfMxbzNGn2xFAhTXFibzQlE++NfJ56Shz3m7+MyBBtXDlEH+3Wfa6lToDXf1MElocY4sJ3w==}
     dependencies:
       '@types/pg': 8.6.6
     dev: false
@@ -2548,7 +2548,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5):
+  /drizzle-orm@0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.6.0)(@types/pg@8.10.2)(postgres@3.3.5):
     resolution: {integrity: sha512-BEATAB0g0Y8PKbJHkHLLENlX2DXktO5XyeNyrXB6ktcNkg3dlMfePwB3LodBJkPY6d7GixFF+jvtdZsWjakJBQ==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -2611,7 +2611,7 @@ packages:
         optional: true
     dependencies:
       '@cloudflare/workers-types': 4.20230814.0
-      '@neondatabase/serverless': 0.4.26
+      '@neondatabase/serverless': 0.6.0
       '@types/pg': 8.10.2
       postgres: 3.3.5
     dev: false
@@ -2622,7 +2622,7 @@ packages:
       drizzle-orm: '>=0.23.13'
       zod: '*'
     dependencies:
-      drizzle-orm: 0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
+      drizzle-orm: 0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.6.0)(@types/pg@8.10.2)(postgres@3.3.5)
       zod: 3.22.2
     dev: false
 
