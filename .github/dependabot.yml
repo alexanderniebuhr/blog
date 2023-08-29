@@ -18,6 +18,7 @@ updates:
       development-dependencies:
         dependency-type: "development"
     open-pull-requests-limit: 0
+    versioning-strategy: increase
   - package-ecosystem: "github-actions"
     # Workflow files stored in the
     # default location of `.github/workflows`
@@ -26,3 +27,4 @@ updates:
       interval: "daily"
       timezone: "Europe/Berlin"
     open-pull-requests-limit: 0
+    versioning-strategy: increase
