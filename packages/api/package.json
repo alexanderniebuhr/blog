@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@alexanderniebuhr/blog-db": "workspace:*",
-    "@astrojs/cloudflare": "6.6.2",
+    "@astrojs/cloudflare": "6.8.1",
     "@trpc/server": "10.34.0",
     "zod": "3.22.2"
   }
