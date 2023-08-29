@@ -10,6 +10,8 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+      # Use Japan Standard Time (UTC +09:00)
+      timezone: "Europe/Berlin"
     groups:
       production-dependencies:
         dependency-type: "production"
@@ -22,4 +24,5 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+      timezone: "Europe/Berlin"
     open-pull-requests-limit: 0
