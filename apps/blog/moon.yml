@@ -3,6 +3,9 @@
 type: "application"
 language: "typescript"
 
+dependsOn:
+  - 'db'
+
 fileGroups:
   sources:
     - "public/**/*"

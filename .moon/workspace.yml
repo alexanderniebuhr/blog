@@ -8,18 +8,29 @@ projects:
   # local-only (can be typescript only)
   db: 'packages/db'
 
+constraints:
+  enforceProjectTypeRelationships: false
+
 codeowners: 
   syncOnRun: true
-  globalPaths: 
+  orderBy: 'project-name'
+  globalPaths:
     '*': ['@alexanderniebuhr']
 
 vcs:
   manager: 'git'
   provider: 'github'
   defaultBranch: 'main'
+  remoteCandidates:
+    - 'origin'
+    - 'upstream'
 
 runner: 
   inheritColorsForPipedTasks: true
 
 experiments:
   taskOutputBoundaries: true
+
+telemetry: true
+
+versionConstraint: '1.12.0'

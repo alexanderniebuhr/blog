@@ -16,6 +16,12 @@
     "jsxImportSource": "react",
     "jsx": "react-jsx",
     "paths": {
+      "@alexanderniebuhr/blog-db": [
+        "../../packages/db/src/index.ts"
+      ],
+      "@alexanderniebuhr/blog-db/*": [
+        "../../packages/db/src/*"
+      ],
       "@alexanderniebuhr/blog-trcp": [
         "../../packages/api/src/index.ts"
       ],
