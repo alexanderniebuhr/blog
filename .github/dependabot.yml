@@ -15,9 +15,11 @@ updates:
         dependency-type: "production"
       development-dependencies:
         dependency-type: "development"
+    open-pull-requests-limit: 0
   - package-ecosystem: "github-actions"
     # Workflow files stored in the
     # default location of `.github/workflows`
     directory: "/"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 0
