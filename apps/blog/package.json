@@ -11,7 +11,7 @@
     "@t3-oss/env-core": "0.6.0",
     "@trpc/client": "10.34.0",
     "@trpc/server": "10.34.0",
-    "astro": "2.8.4",
+    "astro": "2.10.15",
     "astro-icon": "next",
     "react": "18.2.0",
     "react-dom": "18.2.0",
