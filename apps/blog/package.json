@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@alexanderniebuhr/blog-db": "workspace:*",
-    "@astrojs/cloudflare": "6.6.2",
+    "@astrojs/cloudflare": "6.8.1",
     "@astrojs/markdoc": "0.4.2",
     "@astrojs/prefetch": "0.3.0",
     "@astrojs/react": "2.2.1",
