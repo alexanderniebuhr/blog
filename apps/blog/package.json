@@ -4,7 +4,7 @@
     "@astrojs/cloudflare": "6.6.2",
     "@astrojs/markdoc": "0.4.2",
     "@astrojs/prefetch": "0.3.0",
-    "@astrojs/react": "2.2.1",
+    "@astrojs/react": "2.3.2",
     "@astrojs/rss": "2.4.3",
     "@astrojs/sitemap": "2.0.0",
     "@cloudflare/pages-plugin-sentry": "1.1.1",
