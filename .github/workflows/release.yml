@@ -15,7 +15,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v3.6.0
         with:
           fetch-depth: 0
       - uses: moonrepo/setup-moon-action@v1.2.0
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Check
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v3.6.0
         with:
           fetch-depth: 0
       - uses: moonrepo/setup-moon-action@v1.2.0
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v3.6.0
         with:
           fetch-depth: 0
       # - uses: nrwl/nx-set-shas@v3
@@ -44,7 +44,7 @@ jobs:
     environment: test (Production)
     name: Build
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v3.6.0
         with:
           fetch-depth: 0
       - uses: moonrepo/setup-moon-action@v1.2.0
