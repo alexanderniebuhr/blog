@@ -78,8 +78,8 @@ importers:
         specifier: 2.4.3
         version: 2.4.3
       '@astrojs/sitemap':
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.0.2
+        version: 2.0.2
       '@cloudflare/pages-plugin-sentry':
         specifier: 1.1.1
         version: 1.1.1
@@ -315,8 +315,8 @@ packages:
       kleur: 4.1.5
     dev: false
 
-  /@astrojs/sitemap@2.0.0:
-    resolution: {integrity: sha512-hcemuFigv05sdXNiw0U23VO+6Duj9nq9xhINw4ZPWAQEhS/F4EiNvd9IUXb4XJ7pG93MWAnQKF9lP8EtwP6paA==}
+  /@astrojs/sitemap@2.0.2:
+    resolution: {integrity: sha512-dFWtdFwN8kxDiqIxF8T8ODqsUr6hG+EQlFEqm+3oQkhAkucF9QkYLM5Q72mEbYytkL4jvKyHbW1u10T5sWBZew==}
     dependencies:
       sitemap: 7.1.1
       zod: 3.22.2
