@@ -105,8 +105,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       rollup:
-        specifier: 3.26.3
-        version: 3.26.3
+        specifier: 3.29.4
+        version: 3.29.4
       sitemap:
         specifier: 7.1.1
         version: 7.1.1
@@ -5088,16 +5088,8 @@ packages:
       estree-walker: 0.6.1
     dev: true
 
-  /rollup@3.26.3:
-    resolution: {integrity: sha512-7Tin0C8l86TkpcMtXvQu6saWH93nhG3dGQ1/+l5V2TDMceTxO7kDiK6GzbfLWNNxqJXm591PcEZUozZm51ogwQ==}
-    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: false
-
-  /rollup@3.28.0:
-    resolution: {integrity: sha512-d7zhvo1OUY2SXSM6pfNjgD5+d0Nz87CUp4mt8l/GgVP3oBsPwzNvSzyu1me6BSG9JIgWNTVcafIXBIyM8yQ3yw==}
+  /rollup@3.29.4:
+    resolution: {integrity: sha512-oWzmBZwvYrU0iJHtDmhsm662rC15FRXmcjCk1xD771dFDx5jJ02ufAQQTn0etB2emNk4J9EZg/yWKpsn9BWGRw==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -5911,7 +5903,7 @@ packages:
       esbuild: 0.18.20
       lightningcss: 1.21.5
       postcss: 8.4.28
-      rollup: 3.28.0
+      rollup: 3.29.4
     optionalDependencies:
       fsevents: 2.3.2
 

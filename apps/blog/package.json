@@ -15,7 +15,7 @@
     "astro-icon": "next",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rollup": "3.26.3",
+    "rollup": "3.29.4",
     "sitemap": "7.1.1",
     "web-vitals": "3.4.0",
     "zod": "3.22.2"
