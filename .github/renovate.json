@@ -1,13 +1,54 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitBody": "Signed-off-by: {{{gitAuthor}}}",
+  "dependencyDashboard": true,
+  "enabled": true,
   "extends": [
-    "config:js-app",
-    ":approveMajorUpdates",
-    ":maintainLockFilesWeekly"
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
+    "group:monorepos",
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all",
+    "helpers:pinGitHubActionDigests"
   ],
+  "ignoreTests": false,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": [
+      "schedule:weekly"
+    ]
+  },
+  "npm": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "dependencyDashboardApproval": true,
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "rangeStrategy": "pin"
+    },
+    {
+      "matchDepTypes": [
+        "engines",
+        "peerDependencies"
+      ],
+      "rangeStrategy": "auto"
+    }
+  ],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
   "transitiveRemediation": true,
   "vulnerabilityAlerts": {
     "automerge": false,
+    "enabled": true,
     "labels": [
       "security"
     ]

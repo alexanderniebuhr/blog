@@ -4,7 +4,7 @@ type: "application"
 language: "typescript"
 
 dependsOn:
-  - 'db'
+  - "db"
 
 fileGroups:
   sources:
@@ -52,6 +52,14 @@ tasks:
     local: true
     options:
       persistent: true
+      runInCI: false
+      cache: false
+
+  cf:
+    command: "wrangler pages dev --log-level debug -- astro dev"
+    local: true
+    options:
+      persistent: false
       runInCI: false
       cache: false
 
