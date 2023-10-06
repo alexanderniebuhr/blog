@@ -3,7 +3,7 @@
     "@alexanderniebuhr/blog-db": "workspace:*",
     "@astrojs/cloudflare": "6.6.2",
     "@astrojs/markdoc": "0.4.2",
-    "@astrojs/prefetch": "0.3.0",
+    "@astrojs/prefetch": "0.4.1",
     "@astrojs/react": "2.2.1",
     "@astrojs/rss": "2.4.3",
     "@astrojs/sitemap": "2.0.0",
