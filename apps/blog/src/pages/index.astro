@@ -13,9 +13,11 @@ import MyClientComponent from "@components/MyClientComponent";
 
 // const env = createRuntimeEnv(getRuntime(Astro.request)?.env);
 // const env = createRuntimeEnv(import.meta.env);
-console.log(import.meta.env);
-console.log(process.env);
-
+// console.log(import.meta.env);
+// console.log(process.env);
+console.log(Astro.locals);
+const runtime = Astro.locals.runtime;
+console.log(runtime.runtime);
 // import { trpcAstro } from "../scripts/client";
 // const users = await trpcAstro(env.CF_PAGES_URL).users.getById.query({
 // 	id: "d13d8a1f-a369-4e55-a93e-cc46e0a16309",
@@ -26,7 +28,7 @@ console.log(process.env);
   <div>
     <p>Hello World, this is Alex! This is a short paragraph.</p>
     <!-- <Icon name="carbon:3d-cursor" /> -->
-    <!-- {JSON.stringify(users)} -->
+    {JSON.stringify(runtime)}
     <MyClientComponent client:only />
   </div>
 </Wrapper>

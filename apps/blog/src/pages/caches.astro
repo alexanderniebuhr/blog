@@ -1,0 +1,28 @@
+---
+const runtime = Astro.locals.runtime;
+try {
+  await runtime.caches.default.put(
+    "http://localhost/cache",
+    new Response("true", {
+      headers: { "Cache-Control": "max-age=3600", "X-Key": "value" },
+    }),
+  );
+} catch (error) {
+  console.log(error);
+}
+const response = await runtime.caches.default.match("http://localhost/cache");
+const body = await response.text();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CACHES</title>
+  </head>
+  <body>
+    <pre id="hasCACHE">{!!runtime.caches}</pre>
+    <pre id="hasDEFAULT">{!!body}</pre>
+  </body>
+</html>
