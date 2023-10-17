@@ -8,7 +8,7 @@
     "@astrojs/rss": "2.4.3",
     "@astrojs/sitemap": "2.0.0",
     "@cloudflare/pages-plugin-sentry": "1.1.1",
-    "@t3-oss/env-core": "0.6.0",
+    "@t3-oss/env-core": "0.7.1",
     "@trpc/client": "10.34.0",
     "@trpc/server": "10.34.0",
     "astro": "2.8.4",
