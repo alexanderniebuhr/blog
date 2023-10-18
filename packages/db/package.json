@@ -18,6 +18,6 @@
   "devDependencies": {
     "drizzle-kit": "0.19.13",
     "postgres": "3.3.5",
-    "tsx": "3.12.7"
+    "tsx": "3.14.0"
   }
 }
