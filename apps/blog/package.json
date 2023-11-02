@@ -6,7 +6,7 @@
     "@astrojs/prefetch": "0.3.0",
     "@astrojs/react": "2.2.1",
     "@astrojs/rss": "2.4.3",
-    "@astrojs/sitemap": "2.0.0",
+    "@astrojs/sitemap": "3.0.3",
     "@cloudflare/pages-plugin-sentry": "1.1.1",
     "@t3-oss/env-core": "0.6.0",
     "@trpc/client": "10.34.0",
