@@ -10,7 +10,7 @@
     "nodemon": "2.0.22",
     "postcss-html": "1.5.0",
     "prettier": "3.0.2",
-    "prettier-plugin-astro": "0.11.1",
+    "prettier-plugin-astro": "0.12.2",
     "stylelint": "15.10.1",
     "stylelint-config-html": "1.1.0",
     "stylelint-config-standard": "34.0.0",
