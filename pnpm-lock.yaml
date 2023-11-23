@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 4.20230814.0
-        version: 4.20230814.0
+        specifier: 4.20231121.0
+        version: 4.20231121.0
       '@types/node':
         specifier: 20.4.2
         version: 20.4.2
@@ -158,7 +158,7 @@ importers:
         version: 0.4.26
       drizzle-orm:
         specifier: 0.28.4
-        version: 0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
+        version: 0.28.4(@cloudflare/workers-types@4.20231121.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
       drizzle-zod:
         specifier: 0.5.0
         version: 0.5.0(drizzle-orm@0.28.4)(zod@3.22.2)
@@ -635,8 +635,8 @@ packages:
     resolution: {integrity: sha512-VqEY/ZqyHKBn6ivdePSWebpqojwbCXVEuwLkMYHs0UoOAqcGylkVcabdZYdQJKeNxXcOUZ9UBId/x9UsPUm2XQ==}
     dev: false
 
-  /@cloudflare/workers-types@4.20230814.0:
-    resolution: {integrity: sha512-+jHiGjZg2UpULZSSHmHLqUG45TLg1s+uppSMlGvMn0u/xyFsRX9HX6b8Ydg/oHSp3jfSuPtX05GSvtgRAmrWTg==}
+  /@cloudflare/workers-types@4.20231121.0:
+    resolution: {integrity: sha512-+kWfpCkqiepwAKXyHoE0gnkPgkLhz0/9HOBIGhHRsUvUKvhUtm3mbqqoGRWgF1qcjzrDUBbrrOq4MYHfFtc2RA==}
 
   /@csstools/css-parser-algorithms@2.3.0(@csstools/css-tokenizer@2.1.1):
     resolution: {integrity: sha512-dTKSIHHWc0zPvcS5cqGP+/TPFUJB0ekJ9dGKvMAFoNuBFhDPBt9OMGNZiIA5vTiNdGHHBeScYPXIGBMnVOahsA==}
@@ -2548,7 +2548,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5):
+  /drizzle-orm@0.28.4(@cloudflare/workers-types@4.20231121.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5):
     resolution: {integrity: sha512-BEATAB0g0Y8PKbJHkHLLENlX2DXktO5XyeNyrXB6ktcNkg3dlMfePwB3LodBJkPY6d7GixFF+jvtdZsWjakJBQ==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -2610,7 +2610,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@cloudflare/workers-types': 4.20230814.0
+      '@cloudflare/workers-types': 4.20231121.0
       '@neondatabase/serverless': 0.4.26
       '@types/pg': 8.10.2
       postgres: 3.3.5
@@ -2622,7 +2622,7 @@ packages:
       drizzle-orm: '>=0.23.13'
       zod: '*'
     dependencies:
-      drizzle-orm: 0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
+      drizzle-orm: 0.28.4(@cloudflare/workers-types@4.20231121.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
       zod: 3.22.2
     dev: false
 
