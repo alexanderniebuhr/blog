@@ -87,11 +87,11 @@ importers:
         specifier: 0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.22.2)
       '@trpc/client':
-        specifier: 10.34.0
-        version: 10.34.0(@trpc/server@10.34.0)
+        specifier: 10.44.1
+        version: 10.44.1(@trpc/server@10.44.1)
       '@trpc/server':
-        specifier: 10.34.0
-        version: 10.34.0
+        specifier: 10.44.1
+        version: 10.44.1
       astro:
         specifier: 2.8.4
         version: 2.8.4(@types/node@20.4.2)(lightningcss@1.21.5)
@@ -145,8 +145,8 @@ importers:
         specifier: 6.6.2
         version: 6.6.2(astro@2.8.4)
       '@trpc/server':
-        specifier: 10.34.0
-        version: 10.34.0
+        specifier: 10.44.1
+        version: 10.44.1
       zod:
         specifier: 3.22.2
         version: 3.22.2
@@ -1520,16 +1520,17 @@ packages:
       zod: 3.22.2
     dev: false
 
-  /@trpc/client@10.34.0(@trpc/server@10.34.0):
-    resolution: {integrity: sha512-nqtDTIqSY/9syo2EjSy4WWWXPU9GsamEh9Tsg698gLAh1nhgFc5+/YYeb+Ne1pbvWGZ5/3t9Dcz3h4wMyyJ9gQ==}
+  /@trpc/client@10.44.1(@trpc/server@10.44.1):
+    resolution: {integrity: sha512-vTWsykNcgz1LnwePVl2fKZnhvzP9N3GaaLYPkfGINo314ZOS0OBqe9x0ytB2LLUnRVTAAZ2WoONzARd8nHiqrA==}
     peerDependencies:
-      '@trpc/server': 10.34.0
+      '@trpc/server': 10.44.1
     dependencies:
-      '@trpc/server': 10.34.0
+      '@trpc/server': 10.44.1
     dev: false
 
-  /@trpc/server@10.34.0:
-    resolution: {integrity: sha512-2VMW44Fpaoyqb50dBtzdSWMhqt8lmoJiocEyBBeDb03R0W+XrzbVD5kU/wqKPlcp1DWeNCkOEIMtetMZCfo1hA==}
+  /@trpc/server@10.44.1:
+    resolution: {integrity: sha512-mF7B+K6LjuboX8I1RZgKE5GA/fJhsJ8tKGK2UBt3Bwik7hepEPb4NJgNr7vO6BK5IYwPdBLRLTctRw6XZx0sRg==}
+    engines: {node: '>=18.0.0'}
     dev: false
 
   /@trysound/sax@0.2.0:
