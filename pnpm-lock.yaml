@@ -121,8 +121,8 @@ importers:
         specifier: 1.1.18
         version: 1.1.18
       '@iconify-json/charm':
-        specifier: 1.1.8
-        version: 1.1.8
+        specifier: 1.1.11
+        version: 1.1.11
       '@miniflare/tre':
         specifier: 3.0.0-next.13
         version: 3.0.0-next.13
@@ -1335,8 +1335,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify-json/charm@1.1.8:
-    resolution: {integrity: sha512-lFdQ8OWEWzU9nGDZvuGlhfvCExKVtVik6lIwAQCc6tyiRyvw6SFiPYw5P+N5w/oePCwBPCdda7KHRKoZJ8EscQ==}
+  /@iconify-json/charm@1.1.11:
+    resolution: {integrity: sha512-L1mNXBcHUF+60XcJCqNwsdqrso4WZTLwuwUNiH4BdsoT5tbr5AoZLAomqtV8PNwcNb7bPIHm7eFtkhC7Fywm2A==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
