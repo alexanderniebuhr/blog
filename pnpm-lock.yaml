@@ -157,11 +157,11 @@ importers:
         specifier: 0.4.26
         version: 0.4.26
       drizzle-orm:
-        specifier: 0.28.4
-        version: 0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
+        specifier: 0.29.1
+        version: 0.29.1(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
       drizzle-zod:
         specifier: 0.5.0
-        version: 0.5.0(drizzle-orm@0.28.4)(zod@3.22.2)
+        version: 0.5.0(drizzle-orm@0.29.1)(zod@3.22.2)
     devDependencies:
       drizzle-kit:
         specifier: 0.19.13
@@ -2548,8 +2548,8 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5):
-    resolution: {integrity: sha512-BEATAB0g0Y8PKbJHkHLLENlX2DXktO5XyeNyrXB6ktcNkg3dlMfePwB3LodBJkPY6d7GixFF+jvtdZsWjakJBQ==}
+  /drizzle-orm@0.29.1(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5):
+    resolution: {integrity: sha512-yItc4unfHnk8XkDD3/bdC63vdboTY7e7I03lCF1OJYABXSIfQYU9BFTQJXMMovVeb3T1/OJWwfW/70T1XPnuUA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
@@ -2616,13 +2616,13 @@ packages:
       postgres: 3.3.5
     dev: false
 
-  /drizzle-zod@0.5.0(drizzle-orm@0.28.4)(zod@3.22.2):
+  /drizzle-zod@0.5.0(drizzle-orm@0.29.1)(zod@3.22.2):
     resolution: {integrity: sha512-gIOXclphhaleYFEGZFxSyJBoiPRyksGyIPgmgWz6a+j5JeaOrOf1QOPjf1p5AHYA+1O3Q01ondGOZfgObxBTsg==}
     peerDependencies:
       drizzle-orm: '>=0.23.13'
       zod: '*'
     dependencies:
-      drizzle-orm: 0.28.4(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
+      drizzle-orm: 0.29.1(@cloudflare/workers-types@4.20230814.0)(@neondatabase/serverless@0.4.26)(@types/pg@8.10.2)(postgres@3.3.5)
       zod: 3.22.2
     dev: false
 
