@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@iconify-json/carbon": "1.1.18",
-    "@iconify-json/charm": "1.1.8",
+    "@iconify-json/charm": "1.1.11",
     "@miniflare/tre": "3.0.0-next.13",
     "browserslist": "4.21.9",
     "lightningcss": "1.21.5",
