@@ -6,7 +6,7 @@
     "@types/pg": "8.10.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
-    "dprint": "0.40.2",
+    "dprint": "0.43.2",
     "nodemon": "2.0.22",
     "postcss-html": "1.5.0",
     "prettier": "3.0.2",
